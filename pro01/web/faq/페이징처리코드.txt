@@ -1,0 +1,49 @@
+<%
+    int itemsPerPage = 10; // 한 페이지에 보여줄 아이템 수
+    int currentPage = (request.getParameter("page") != null) ? Integer.parseInt(request.getParameter("page")) : 1;
+
+    // faqList 전체 데이터와 총 개수를 가정하고 나눠주는 로직
+    List<Faq> faqList = new ArrayList<>(); // faqList는 예시를 위한 가상의 데이터라 가정합니다.
+    int totalItems = faqList.size();
+    int totalPages = (int) Math.ceil((double) totalItems / itemsPerPage);
+
+    int startItem = (currentPage - 1) * itemsPerPage;
+    int endItem = Math.min(startItem + itemsPerPage, totalItems);
+%>
+
+<ul class="faqlist">
+    <%-- 페이징 처리된 faq 출력 --%>
+    <%
+        for (int i = startItem; i < endItem; i++) {
+            Faq f = faqList.get(i);
+    %>
+    <li>
+        <div class="que"><%= f.getQuestion() %></div>
+        <br>
+        <div class="ans"><%= f.getAnswer() %></div>
+        <div class="btn_group2">
+            <% if (sid != null && sid.equals("admin")) { %>
+            <a href="/faq/updatefaq.jsp?fno=<%= f.getFno() %>&page=<%= currentPage %>" class="inbtn2"> 글 수정</a>
+            <a href="/faq/deletefaqpro.jsp?fno=<%= f.getFno() %>&page=<%= currentPage %>" class="inbtn2" id="delete_btn"> 글 삭제</a>
+            <% } %>
+        </div>
+    </li>
+    <hr>
+    <%
+        }
+    %>
+</ul>
+
+<div class="pagination">
+    <% if (currentPage > 1) { %>
+    <a href="?page=<%= currentPage - 1 %>">Previous</a>
+    <% } %>
+
+    <% for (int i = 1; i <= totalPages; i++) { %>
+    <a href="?page=<%= i %>"><%= i %></a>
+    <% } %>
+
+    <% if (currentPage < totalPages) { %>
+    <a href="?page=<%= currentPage + 1 %>">Next</a>
+    <% } %>
+</div>

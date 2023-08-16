@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/web/board/boardList.jsp" value="file://$PROJECT_DIR$/web/board" />
+        <entry key="file://$PROJECT_DIR$/web/board/getBoard.jsp" value="file://$PROJECT_DIR$/web/board" />
+        <entry key="file://$PROJECT_DIR$/web/board/updateBoardpro.jsp" value="file://$PROJECT_DIR$/web/board" />
+        <entry key="file://$PROJECT_DIR$/web/board_stu/updateBoardStupro.jsp" value="file://$PROJECT_DIR$/web/board_stu" />
+        <entry key="file://$PROJECT_DIR$/web/index.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/member/loginpro.jsp" value="file://$PROJECT_DIR$/web/member" />
+        <entry key="file://$PROJECT_DIR$/web/member/mypage.jsp" value="file://$PROJECT_DIR$/web/member" />
+        <entry key="file://$PROJECT_DIR$/web/menu/company.jsp" value="file://$PROJECT_DIR$/web/menu" />
+        <entry key="file://$PROJECT_DIR$/web/menu/learning.jsp" value="file://$PROJECT_DIR$/web/menu" />
+        <entry key="file://$PROJECT_DIR$/web/qna_career/getQna.jsp" value="file://$PROJECT_DIR$/web/qna_career" />
+        <entry key="file://$PROJECT_DIR$/web/upload/file_upload2.jsp" value="file://$PROJECT_DIR$/web/upload" />
+      </map>
+    </option>
+  </component>
+</project>

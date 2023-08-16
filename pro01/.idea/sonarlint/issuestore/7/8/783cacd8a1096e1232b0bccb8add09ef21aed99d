@@ -1,0 +1,35 @@
+
+`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112""FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112)"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S1124"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112;"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112B"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+P
+java:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+k	java:S116"QRename this field "DRIVER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­†³”ıÿÿÿÿ
+h	java:S116"NRename this field "DNS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜µÅŸøÿÿÿÿ
+d	java:S116"ORename this field "PORT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İøƒ
+d	java:S116"ORename this field "NAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ß
+d	java:S116	"ORename this field "USER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íÆûß
+i	java:S116
+"ORename this field "PASS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ÿ’Şùÿÿÿÿ
+h	java:S116"NRename this field "URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎÑ‘øÿÿÿÿ
+<
+java:S1170"!Make this final field static too.(­†³”ıÿÿÿÿ
+<
+java:S1170"!Make this final field static too.(˜µÅŸøÿÿÿÿ
+7
+java:S1170"!Make this final field static too.(İøƒ
+7
+java:S1170"!Make this final field static too.(÷ß
+7
+java:S1170	"!Make this final field static too.(íÆûß
+<
+java:S1170
+"!Make this final field static too.(¼ÿ’Şùÿÿÿÿ
+<
+java:S1170"!Make this final field static too.(ÎÑ‘øÿÿÿÿ
+Q
+java:S6437"6Revoke and change this password, as it is compromised.(¥µÌÇøÿÿÿÿ

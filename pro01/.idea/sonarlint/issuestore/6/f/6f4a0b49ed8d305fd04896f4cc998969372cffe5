@@ -1,0 +1,12 @@
+
+g	java:S112""FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8×™Ü¥1
+g	java:S112?"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8×™Ü¥1
+Œ
+java:S1319)"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¾ÅÄn8£”İ¥1
+l
+java:S20952"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ä×Óù8©“¦1
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(‘”–®øÿÿÿÿ8â™Ü¥1
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¬‡—ûıÿÿÿÿ8â™Ü¥1
+Z	java:S106>"9Replace this use of System.out or System.err by a logger.(…ûşúÿÿÿÿ8í™Ü¥1
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8õ†•¦1
