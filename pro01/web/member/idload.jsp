@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ page import="java.sql.*" %>
 <%@ page import="com.chunjae.db.*" %>
+<%@ include file="/encoding.jsp"%>
 <%
     String id = request.getParameter("id");
     Connection conn = null;
@@ -31,8 +32,14 @@
 %>
 <script>
     function fnc1(cid){
-        opener.document.frm1.id.value = cid;
-        opener.document.frm1.ck_item.value = "yes";
+        // console.log(opener);
+        // console.log(opener.document.getElementById("id").value);
+        // console.log(opener.document.frm1);
+        // opener.document.frm1.id.value = cid;
+        // opener.document.frm1.ck_item.value = "yes";
+        const parentForm = window.opener.document.querySelector('.frm1');
+        parentForm.querySelector('#id').value = cid;
+        parentForm.querySelector('#ck_item').value = "yes";
         window.close();
     }
 </script>

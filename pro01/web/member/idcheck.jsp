@@ -13,7 +13,7 @@
 <div class="container">
     <form name="child" action="idload.jsp" method="post" onsubmit="return invalidCheck(this)">
         <label for="id">아이디</label>
-        <input type="text" name="id" id="id" value="<%=id %>" placeholder="12글자 이내">
+        <input type="text" name="id" id="id" value="<%=id %>" placeholder="20글자 이내">
         <input type="submit" value="아이디 중복 검사">
     </form>
     <script src="/js/idcheck.js"></script>

@@ -315,8 +315,7 @@
                         <div class="register_info_id">
                             <label>아이디<%--<span>사용할 수 없는 아이디 입니다</span>--%></label>
 
-                            <input style="" required="" placeholder="아이디 (6~20자)" class="indata" id="id" name="id"
-                                   type="text">
+                            <input type="text" name="id" id="id" class="indata" placeholder="아이디 (6~20자)" required/>
                             <button type="button" id="ck_btn" onclick="idcheck()">중복 확인</button>
                             <input type="hidden" name="ck_item" id="ck_item" value="no">
                             <input type="hidden" name="job" id="job" value="<%=job%>" readonly="">
@@ -560,5 +559,19 @@
     <%@ include file="../footer.jsp" %>
 </footer>
 </div>
+<script>
+    function idcheck(){
+        var child;
+        var id = document.getElementById("id");
+        if(id.value!="") {
+            child = window.open("", "child", "width=600, height=400");
+            child.location.href = "idcheck.jsp?id="+id.value;
+        } else {
+            alert("아이디 입력란에 아이디를 입력하고, 진행하시기 바랍니다.");
+            id.focus();
+            return false;
+        }
+    }
+</script>
 </body>
 </html>
