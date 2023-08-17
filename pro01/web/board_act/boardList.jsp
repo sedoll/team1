@@ -212,11 +212,11 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board/baordList.jsp">자유게시판</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="/board/baordList.jsp">대외활동</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
-                <h2 class="page_tit">자유게시판</h2>
+                <h2 class="page_tit">대외활동</h2>
                 <table class="tb1" id="myTable">
                     <thead>
                         <tr>

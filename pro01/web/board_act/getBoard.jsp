@@ -306,11 +306,11 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board/boardList.jsp">입시정보</a> &gt; <a href="/board/getBoard.jsp?bno=<%=bno%>">입시정보글</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="/board/boardList.jsp">대외활동</a> &gt; <a href="/board/getBoard.jsp?bno=<%=bno%>">게시글</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
-                <h2 class="page_tit">입시정보글</h2>
+                <h2 class="page_tit">게시글</h2>
                 <table class="tb1">
                     <%
                         String id2 = boardList.get(0).getAuthor();
