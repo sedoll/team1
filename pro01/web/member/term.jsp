@@ -21,29 +21,83 @@
     <link rel="stylesheet" href="../css/hd.css">
     <style>
         /* 본문 영역 스타일 */
-        .contents { clear:both; min-height:100vh;
+        .contents {
+            clear: both;
+            min-height: 150vh;
             background-image: url("../img/login.jpg");
-            background-repeat: no-repeat; background-position:center -250px; }
-        .contents::after { content:""; clear:both; display:block; width:100%; }
+            background-repeat: no-repeat;
+            background-position: center -250px;
+        }
 
-        .page { clear:both; width: 100vw; height: 100vh; position:relative; }
-        .page::after { content:""; display:block; width: 100%; clear:both; }
+        .contents::after {
+            content: "";
+            clear: both;
+            display: block;
+            width: 100%;
+        }
 
-        .page_wrap { clear:both; width: 1200px; height: auto; margin:0 auto; }
-        .page_tit { font-size:48px; text-align: center; padding-top:1em; color:#fff;
-            padding-bottom: 2.4rem; }
+        .page {
+            clear: both;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
 
-        .breadcrumb { clear:both;
-            width:1200px; margin: 0 auto; text-align: right; color:#fff;
-            padding-top: 28px;}
-        .breadcrumb a { color:#fff; }
+        .page::after {
+            content: "";
+            display: block;
+            width: 100%;
+            clear: both;
+        }
+
+        .page_wrap {
+            clear: both;
+            width: 1200px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .page_tit {
+            font-size: 48px;
+            text-align: center;
+            padding-top: 1em;
+            color: #fff;
+            padding-bottom: 2.4rem;
+        }
+
+        .breadcrumb {
+            clear: both;
+            width: 1200px;
+            margin: 0 auto;
+            text-align: right;
+            color: #fff;
+            padding-top: 28px;
+        }
+
+        .breadcrumb a {
+            color: #fff;
+        }
+
+
+        .select_tit {
+            font-size: 30px;
+            text-align: center;
+            padding-top: 1em;
+            color: #2b2b2b;
+        }
 
         <%-- 학생, 선생님 선택 폼 css--%>
-        .frm { clear:both; width:1200px; margin:0 auto; padding-top: 80px; display: flex;
+        .frm {
+            clear: both;
+            width: 1200px;
+            margin: 0 auto;
+            padding-top: 40px;
+            display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            font-size: 20px;}
+            font-size: 20px;
+        }
 
         .profile {
             margin: 0 50px; /* 이미지 사이 간격 */
@@ -57,7 +111,7 @@
             padding: 0;
         }
 
-        ul.join_type  {
+        ul.join_type {
             padding: 0;
             margin: 20px 0;
         }
@@ -79,49 +133,76 @@
             margin-top: 20px; /* 버튼과 이미지 사이 간격 */
         }
 
-        .inbtn { display:block;  border-radius:100px;
-            min-width:140px; padding-left: 24px; padding-right: 24px; text-align: center;
-            line-height: 48px; background-color: #333; color:#fff; font-size: 18px; }
+        .inbtn {
+            display: block;
+            border-radius: 100px;
+            min-width: 140px;
+            padding-left: 24px;
+            padding-right: 24px;
+            text-align: center;
+            line-height: 48px;
+            background-color: #333;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .inbtn2 {
+            display: block;
+            border-radius: 10px;
+            border-style: none;
+            min-width: 140px;
+            padding-left: 24px;
+            padding-right: 24px;
+            text-align: center;
+            line-height: 48px;
+            background-color: cornflowerblue;
+            color: #fff;
+            font-size: 18px;
+        }
     </style>
 
     <link rel="stylesheet" href="../css/ft.css">
 </head>
 <body>
-    <header class="hd" id="hd">
-        <%@ include file="../header.jsp" %>
-    </header>
-    <div class="contents" id="contents">
-        <div class="breadcrumb">
-            <p><a href="">HOME</a> &gt; <span>회원 유형</span></p>
-        </div>
-        <section class="page" id="page1">
-            <div class="page_wrap">
-                <h2 class="page_tit">회원 유형</h2>
-                <form action="join.jsp" method="post" class="frm">
-                    <div>
-                        <ul class="join_type">
-                            <li>
-                                <img class="profile" src="/img/boy.png" alt="">
-                                <input type="radio" name="job" value="1" id="stu" checked>
-                                <label for="stu">학생</label><br>
-                            </li>
-                            <li>
-                                <img class="profile" src="/img/teacher.png" alt="">
-                                <input type="radio" name="job" value="2" id="tea">
-                                <label for="tea">교사</label><br>
-                            </li>
-                        </ul>
-                    </div>
-                    <br>
-                    <p>가입 유형을 선택해 주세요</p>
-                    <br>
-                    <input class="inbtn" type="submit" value="다음 단계">
-                </form>
-            </div>
-        </section>
+<header class="hd" id="hd">
+    <%@ include file="../header.jsp" %>
+</header>
+<div class="contents" id="contents">
+    <div class="breadcrumb">
+        <p><a href="">HOME</a> &gt; <span>회원 유형</span></p>
     </div>
-    <footer class="ft" id="ft">
-        <%@ include file="../footer.jsp" %>
-    </footer>
+    <section class="page" id="page1">
+        <div class="page_wrap">
+            <h2 class="page_tit">회원 유형</h2>
+
+
+            <p class="select_tit">가입 유형을 선택해 주세요</p>
+
+
+            <form action="join.jsp" method="post" class="frm">
+                <div>
+                    <ul class="join_type">
+                        <li>
+                            <img class="profile" src="/img/student.png" alt="">
+                            <input type="radio" name="job" value="1" id="stu" checked>
+                            <label for="stu">학생</label><br>
+                        </li>
+                        <li>
+                            <img class="profile" src="/img/teacher2.png" alt="">
+                            <input type="radio" name="job" value="2" id="tea">
+                            <label for="tea">교사</label><br>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <input class="inbtn2" type="submit" value="다음 단계">
+            </form>
+        </div>
+    </section>
+</div>
+<footer class="ft" id="ft">
+    <%@ include file="../footer.jsp" %>
+</footer>
 </body>
 </html>

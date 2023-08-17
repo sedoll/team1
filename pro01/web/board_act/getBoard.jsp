@@ -262,7 +262,7 @@
     try{
         // 조회수 갱신 코드
         conn = con.connect();
-        String sql = "update board_unv set cnt=cnt+1 where bno=?";
+        String sql = "update board_act set cnt=cnt+1 where bno=?";
         System.out.println(bno);
         pstmt = conn.prepareStatement(sql);
         pstmt.setInt(1, bno);
@@ -274,7 +274,7 @@
         }
 
         // 해당 qno(par) 번호를 갖는 게시물 내용, 댓글 불러오기
-        String sql2 = "select * from board_unv where bno=?";
+        String sql2 = "select * from board_act where bno=?";
         pstmt = conn.prepareStatement(sql2);
         pstmt.setInt(1, bno);
         rs = pstmt.executeQuery();
@@ -322,12 +322,12 @@
                         <tr>
                             <td>
                                 <% if (sid != null && sid.equals("admin")) { %>
-                                <a href="/board_unv/updateBoard.jsp?bno=<%=bno%>" class="inbtn">수정</a>
+                                <a href="/board_act/updateBoard.jsp?bno=<%=bno%>" class="inbtn">수정</a>
                                 <% } %>
                             </td>
                             <td>
                                 <% if (sid != null && sid.equals("admin")) { %>
-                                <a href="/board_unv/deleteBoardpro.jsp?bno=<%=bno%>" class="inbtn delete_btn" >삭제</a>
+                                <a href="/board_act/deleteBoardpro.jsp?bno=<%=bno%>" class="inbtn delete_btn" >삭제</a>
                                 <% } %>
                             </td>
                             <td><%=boardList.get(0).getAuthor()%></td>

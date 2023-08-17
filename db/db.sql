@@ -105,6 +105,20 @@ CREATE TABLE board_unv(
 		CASCADE -- 작성자를 member id를 이용해 외래키로 사용
 );
 
+-- 대외활동 게시판
+-- 모두 사용 가능
+CREATE TABLE board_act(
+	bno INT PRIMARY KEY AUTO_INCREMENT, -- act 글 번호
+	title VARCHAR(200) NOT NULL, -- 제목
+	content VARCHAR(1000), -- 내용
+	author VARCHAR(16), -- 작성자
+	resdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP(), -- 작성일
+	cnt INT DEFAULT 0, -- 조회수
+	link VARCHAR(1000), -- 링크
+	FOREIGN KEY(author) REFERENCES member(id) ON DELETE 		
+		CASCADE -- 작성자를 member id를 이용해 외래키로 사용
+);
+
 CREATE VIEW qnalist AS(SELECT q.qno AS qno, q.title AS title, q.content AS content, q.author AS author, 
 q.resdate AS resdate,q.cnt AS cnt, q.lev AS lev, q.par AS par, m.name AS name
 FROM qna_career q, member m WHERE q.author=m.id order BY q.par DESC, q.lev ASC, q.qno ASC);
