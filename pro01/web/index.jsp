@@ -19,8 +19,10 @@
     <link rel="stylesheet" href="./css/slidebox.css">
 
     <style>
-        .img_box li.item1 .bg_box { background-image: url("./img/cj1.jpg"); }
-        .img_box li.item2 .bg_box { background-image: url("./img/cj2.jpg"); }
+        .img_box li.item1 .bg_box { background-image: url("./img/007.png");
+
+        }
+        .img_box li.item2 .bg_box { background-image: url("./img/008.png"); }
 
 
         .page {clear: both; width: 100vw; height: 100vh; position: relative;}
@@ -75,15 +77,15 @@
             <li class="item1 active">
                 <input type="radio" name="vs_ra" id="vs_ra1" class="vs_ra" checked>
                 <div class="bg_box"></div>
-                <h2 class="vs_tit">“나눔의 힘! 실천의 힘!”<br>
-                    <strong>작은 따뜻함으로 세상을 <br>바꿉니다</strong>
-                </h2>
+<%--                <h2 class="vs_tit">“나눔의 힘! 실천의 힘!”<br>--%>
+<%--                    <strong>작은 따뜻함으로 세상을 <br>바꿉니다</strong>--%>
+<%--                </h2>--%>
             </li>
             <li class="item2">
                 <input type="radio" name="vs_ra" id="vs_ra2" class="vs_ra">
                 <div class="bg_box"></div>
-                <h2 class="vs_tit">교육에 대한 끊임없는 도전<br>
-                    <strong>행복한 내일을 함께 합니다</strong></h2>
+<%--                <h2 class="vs_tit">교육에 대한 끊임없는 도전<br>--%>
+<%--                    <strong>행복한 내일을 함께 합니다</strong></h2>--%>
             </li>
         </ul>
         <ul class="btn_box">

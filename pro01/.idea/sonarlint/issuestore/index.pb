@@ -87,3 +87,53 @@ N
 src/com/chunjae/dto/Board.java,f\c\fc60570f9b76206476074afc3ca578b0cd29158f
 <
 web/head.jsp,4\a\4a87f90bffcdb4e9d2b938add5b82f2f1ade81b4
+N
+web/board_stu/boardStuList.jsp,0\b\0bf70cb818d0bde429debc93b410153ea93f6d63
+F
+web/board/getBoard.jsp,8\6\86f6680ef4b667a441b16a13e6f448d04f99cfb2
+S
+#web/board_stu/deleteBoardStupro.jsp,5\d\5dc11d938766f5d640aecdc2f7aa9e384bb7bb26
+=
+web/index.jsp,9\f\9f198ed450f32e45b10ec3c2b1406e609b4a96cd
+K
+web/file/deleteBoardpro.jsp,e\e\ee6aa988061c2d5412eed770c8d583da607b003c
+K
+web/file/downloadAction.jsp,0\0\008ed0052c55e104d1169d58b28d1f4bfcd15c6c
+G
+web/file/fileUpload.jsp,8\2\82e0077cc8260399032af59d58e9199b78f046d8
+F
+web/file/fileUpPro.jsp,5\b\5b2923c2ae7a9b3fdc81e1a8a1ed103e68cf2f02
+F
+web/file/boardList.jsp,d\5\d51322d50f61babf278017bfb01d9476c5dd68e4
+K
+web/board_act/boardList.jsp,d\f\dfd2300cd43ee25e610f0e5c02b1687934acf9c4
+J
+web/board_act/addBoard.jsp,2\5\25cfb34a66cde0d2308422c9ae6322657c6a5dee
+M
+web/board_act/addBoardpro.jsp,4\3\43f7cde527bdcdc246900d61234d8659a0c77802
+P
+ web/board_act/deleteBoardpro.jsp,3\e\3e2e041a20f500949754a36f6060d540c5d94f32
+M
+web/board_act/updateBoard.jsp,2\6\26de11c7ccd70b1025d87ce74936b410e9fa3fcf
+P
+ web/board_act/updateBoardpro.jsp,6\c\6c00cb5a07993ca0ad7755d4c37fd7c243a2e839
+P
+ web/board_unv/deleteBoardpro.jsp,c\b\cb4705889aa73d58b511a14476e7b354c303b480
+K
+web/board_unv/boardList.jsp,f\0\f0d9e9f47c98f24b1e758b48b07931bd32b1e465
+M
+web/board_stu/getBoardStu.jsp,3\5\35ebcd6df902f15608699295616baaecc491d0ff
+M
+web/board_unv/addBoardpro.jsp,c\8\c8ab7c9623baf216c7d13d69d9a46eec93ebd3f3
+M
+web/board_unv/updateBoard.jsp,0\6\06c4d1b677dec259a8a1362bea8d8a1e9f8d5c71
+J
+web/board_unv/addBoard.jsp,e\3\e3a8c114404128d57e18a5957501171fdbd6e59f
+J
+web/board_act/getBoard.jsp,8\b\8bdd63685269ed905c0565d421bac0c867a0d282
+J
+web/board_unv/getBoard.jsp,0\a\0a12578b32bcd0ed97a90bb9290062728be67e9e
+P
+ web/board_unv/updateBoardpro.jsp,3\1\31d01f98a439e5d820f6ad885f4bdfb94c58f1c6
+>
+web/header.jsp,f\f\ff77691b3d429e53a4449f401a4cd692f37474d9

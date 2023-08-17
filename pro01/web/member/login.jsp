@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="../css/ft.css">
     <style>
 
-
         /* 본문 영역 스타일 */
         .contents {
             clear: both;
@@ -56,7 +55,7 @@
 
         .page_wrap {
             clear: both;
-            width: 300px;
+            width: 1200px;
             height: auto;
             margin: 0 auto;
 
@@ -85,14 +84,26 @@
 
 
         .login-form {
-            margin-top: 50px;
+            /*margin-top: 50px;*/
+            margin: 50px auto;
             width: 350px;
             height: 400px;
             border: 0;
             border-radius: 5px;
             background-color: #eaf4fa;
             padding: 30px;
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);, text-align: center;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .login-form a {
+            text-decoration: none;
+            color: #9B9B9B;
+            font-size: 18px;
+            /*margin-left: 130px;*/
+        }
+        .tb1 {
+            margin-left: 22px;
         }
 
         .logo-wrap {
@@ -127,13 +138,6 @@
         }
 
 
-        .login-form a {
-            text-decoration: none;
-            color: #9B9B9B;
-            font-size: 18px;
-            margin-left: 130px;
-
-        }
 
 
     </style>

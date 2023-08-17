@@ -36,9 +36,9 @@
                 </ul>
             </li>
             <li class="item2">
-                <a href="" class="dp1">정보&자료실</a>
+                <a href="" class="dp1">정보</a>
                 <ul class="sub">
-                    <li><a class="move" href="/board_unv/boardList.jsp">입시 정보</a></li>
+                    <li><a class="move" href="/information_info/boardList.jsp">입시 정보</a></li>
                     <li><a class="move" href="/board_act/boardList.jsp">대외 활동 정보</a></li>
                     <li><a class="move" href="/file/boardList.jsp">자료실</a></li>
                 </ul>

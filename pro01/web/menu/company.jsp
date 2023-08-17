@@ -85,16 +85,12 @@
             color: #fff;
         }
 
-        .tab_box {
-            clear: both;
-            width: 1200px;
-            height: 42px;
+        .tab_box { clear:both; width: 800px; height: 42px;
+            position:absolute;  left: 50%;
+            z-index:1; margin-left: -200px;}
+
+        .tab_box ul{
             margin: 0 auto;
-            position: fixed;
-            bottom: 0;
-            left: 50%;
-            margin-left: -600px;
-            z-index: 99;
         }
 
         .tab_box li {
@@ -115,11 +111,11 @@
             display: block;
             width: 100%;
             text-align: center;
-            background-color: rgba(136, 255, 0, 0.7);
+            background-color: rgb(127, 179, 250);
         }
 
         .tab_box li label:hover {
-            background-color: rgba(1, 95, 1, 0.9);
+            background-color: rgb(90, 149, 245);
             color: white;
             font-size: 20px;
         }
@@ -129,28 +125,35 @@
         }
 
         .con_tit {
-            font-size: 48px;
+            font-size: 46px;
             line-height: 1.3;
         }
 
         .cont {
             font-size: 24px;
             margin-top: 50px;
+            color: #585858;
         }
 
         .com_img {
-            width: 1000px;
+            width: 500px;
             position: absolute;
-            top: 300px;
+            top: 150px;
             left: 1000px;
             float: right;
         }
+
+        .highlight{
+            color: rgb(153, 219, 233);
+        }
+
 
         .ra1 {display: none;}
         .ra1:not(:checked) + .page {display: none;} /*버튼이 체크 되있지 않으면*/
         .ra1:checked + .page {display: block;}
         .ra1:checked #map {display: block;}
         /*.ra1:checked + #tab2 {height: 800px;} 버튼이 체크 되어 있으면*/
+
 
         /*.maparea { }*/
     </style>
@@ -163,14 +166,12 @@
         <div class="contents">
             <div class="back_bread">
                 <div class="breadcrumb">
-                    <p><a href="">HOME</a> &gt; <a href="">회사소개</a></p>
+                    <p><a href="">HOME</a> &gt; <a href="">TeenTalk 소개</a></p>
                 </div>
             </div>
             <div class="tab_box">
                 <ul>
-                    <li><label for="com">회사개요</label></li>
-                    <li><label for="greet">인사말</label></li>
-                    <li><label for="history">회사연혁</label></li>
+                    <li><label for="com">TeenTalk 소개</label></li>
                     <li><label for="map1">오시는길</label></li>
                 </ul>
                 <!-- <ul>
@@ -184,34 +185,22 @@
             <input type="radio" name="ra1" class="ra1" id="com" checked/>
             <section class="page" id="com">
                 <div class="page_wrap">
-                    <h2 class="page_tit">회사개요</h2>
+                    <h2 class="page_tit">TeenTalk 소개</h2>
                     <div class="com_content">
-                        <h3 class="con_tit">대한민국 1위 교육·출판 전문 기업</h3>
-                        <h3 class="con_tit">교육의 미래를 선도합니다.</h3>
-                        <p class="cont">천재교육은 교과서와 학습 교재를 출간하는 교육·출판 전문 기업입니다. <br><br>
+                        <h3 class="con_tit">학생과 선생님들 모두 함께 이야기하며</h3>
+                        <h3 class="con_tit">쉴 수 있는 <span class="highlight">소통의 광장</span>이 되겠습니다.</h3>
+                        <p class="cont">TeenTalk은 학생들 뿐만 아니라 선생님들도 함께 할 수 있는 <br>
+                            커뮤니티 사이트 입니다.<br><br>
 
-                            제5차 교육과정부터 국정·검정·인정 교과용 도서를 개발, 발행하고
-                            연간 3,700여 종에 이르는 유아동·초·중·고등 학습 교재를 발간하고 있습니다. <br><br>
+                            학생들에겐 다른 친구들과 소통이 가능한 게시판들과 선생님들에게서<br>
+                            입시를 위한 진로 상담도 가능합니다.<br><br>
 
-                            또한 미래 인재 육성을 위한 학원 프랜차이즈 사업과
-                            4차 산업혁명 시대에 발맞춘 스마트러닝, 에듀테크 사업 등을 통해
-                            대한민국 교육 트렌드를 주도하고 있습니다.</p>
+                            선생님들에겐 입시 또는 학교생활에 많은 궁금증을 가지고 있는 학생들에게
+                            상담과 입시 정보 등을 공유 해줄 수 있으며, <br>
+                            다른 선생님들과 소통하며 학교 업무에 유용한 정보들을 들을 수 있는 게시판을
+                            제공하고 있습니다.</p>
                     </div>
-                    <img src="../img/company1.jpg" alt="" class="com_img">
-                </div>
-            </section>
-
-            <input type="radio" name="ra1" class="ra1" id="greet" />
-            <section class="page" id="greet">
-                <div class="page_wrap">
-                    <h2 class="page_tit">인사말</h2>
-                </div>
-            </section>
-
-            <input type="radio" name="ra1" class="ra1" id="history" />
-            <section class="page" id="history">
-                <div class="page_wrap">
-                    <h2 class="page_tit">회사연혁</h2>
+                    <img src="../img/ogu2.png" alt="" class="com_img">
                 </div>
             </section>
 
