@@ -168,15 +168,20 @@
 
     </style>
 </head>
-
 <%
+    if(sid != null && (!sid.equals("") || sid.equals("admin"))) {
+
+    } else {
+        out.println("<script>alert('해당 페이지는 회원만 접근 가능합니다.')</script>");
+        out.println("<script>location.href='/index.jsp'</script>");
+    }
+
     request.setCharacterEncoding("utf8");
     response.setContentType("text/html;charset=UTF-8");
     response.setCharacterEncoding("utf8");
 
     String directory = application.getRealPath("/data");
     String files[] = new File(directory).list();
-
 %>
 <body>
 <div class="wrap">
@@ -189,13 +194,14 @@
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
-                <h2 class="page_tit">자유게시판</h2>
+                <h2 class="page_tit">자료실</h2>
                 <table class="tb1" id="myTable">
                     <thead>
                         <tr>
                             <th class="item1" style="text-align: center">번호</th>
                             <th class="item2" style="text-align: center">제목</th>
                             <th class="item3" style="text-align: center">작성자</th>
+                            <th class="item1" style="text-align: center">비고</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -205,9 +211,17 @@
                     %>
                     <tr>
                         <td class="item1"><%=tot-- %></td>
-                        <td class="item2"><a href="<%=request.getContextPath() %>downloadAction.jsp?file=<%=java.net.URLEncoder.encode(file, "UTF-8") %>
-                            "><%=file %></a></td>
+                        <td class="item2">
+                            <a href="<%=request.getContextPath() %>downloadAction.jsp?file=<%=java.net.URLEncoder.encode(file, "UTF-8") %>
+                            "><%=file %>
+                            </a>
+                        </td>
                         <td class="item3">admin</td>
+                        <td class="item1">
+                            <% if (sid != null && sid.equals("admin")) { %>
+                            <a href="deleteBoardpro.jsp?file=<%=file %>" class="inbtn delete_btn">삭제</a>
+                            <% } %>
+                        </td>
                     </tr>
                     <%
                         }

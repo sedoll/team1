@@ -24,5 +24,6 @@
     <orderEntry type="library" name="cos" level="project" />
     <orderEntry type="library" name="commons.fileupload" level="project" />
     <orderEntry type="library" name="commons.io" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>

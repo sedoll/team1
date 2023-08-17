@@ -10,7 +10,7 @@
 <body>
 <h1>form</h1>
 <form action="fileUpPro.jsp" enctype="multipart/form-data" method="post">
-    파일 : <input type="file" name="upfile" accept=".jpg, .png, .pdf"><br/>
+    파일 : <input type="file" name="upfile" accept=".pdf, .hwp, .hwpx, .doc, .docx"><br/>
     <input type="submit" value="Upload">
 </form>
 </body>
