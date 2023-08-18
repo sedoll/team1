@@ -7,13 +7,13 @@
 <%@ page import="java.util.Date" %>
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="com.chunjae.dto.Board" %>
-<%@ page import="java.io.File" %>
+<%@ page import="com.chunjae.dto.Member" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>입시 정보</title>
+    <title>자유게시판</title>
     <%@ include file="../head.jsp" %>
 
     <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
@@ -123,29 +123,20 @@
         }
 
         .tb1 .item1 {
-            width: 8%;
+            width: 10%;
         }
         .tb1 .item2 {
-            width: 60%;
-            text-overflow: ellipsis;
-            text-align: left;
-        }
-        .tb1 .item3 {
-            width: 12%;
+            width: 20%;
         }
 
         /* 기타 버튼 스타일 */
         .inbtn {
             display: block;
             border-radius: 10px;
-            min-width: 60px;
-            padding-left: 24px;
-            padding-right: 24px;
+            min-width: 100px;
             text-align: center;
-            line-height: 38px;
             background-color: #527AF2;
             color: #fff;
-            font-size: 18px;
             float: right;
             cursor: pointer;
             transition: background-color 0.3s;
@@ -168,20 +159,45 @@
 
     </style>
 </head>
+
 <%
-    if(sid != null && (!sid.equals("") || sid.equals("admin"))) {
-
-    } else {
-        out.println("<script>alert('해당 페이지는 회원만 접근 가능합니다.')</script>");
-        out.println("<script>location.href='/index.jsp'</script>");
-    }
-
     request.setCharacterEncoding("utf8");
     response.setContentType("text/html;charset=UTF-8");
     response.setCharacterEncoding("utf8");
 
-    String directory = application.getRealPath("/data");
-    String files[] = new File(directory).list();
+    List<Member> memList = new ArrayList<>();
+
+    Connection conn = null;
+    PreparedStatement pstmt = null;
+    ResultSet rs = null;
+
+    DBC con = new MariaDBCon();
+    conn = con.connect();
+    if(conn != null){
+        System.out.println("DB 연결 성공");
+    }
+
+    // 해당 회원의 정보를 db에서 가져옴
+    try {
+        String sql = "select * from member where id != 'admin'";
+        pstmt = conn.prepareStatement(sql);
+        rs = pstmt.executeQuery();
+        while(rs.next()){
+            Member member = new Member();
+            member.setId(rs.getString("id"));
+            member.setPw(rs.getString("pw"));
+            member.setName(rs.getString("name"));
+            member.setEmail(rs.getString("email"));
+            member.setRegdate(rs.getString("regdate"));
+            member.setPoint(rs.getInt("point"));
+            member.setJob(rs.getInt("job"));
+            memList.add(member);
+        }
+    } catch(SQLException e) {
+        System.out.println("SQL 구문이 처리되지 못했습니다.");
+    } finally {
+        con.close(rs, pstmt, conn);
+    }
 %>
 <body>
 <div class="wrap">
@@ -190,38 +206,37 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board/baordList.jsp">자료실</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="/admin/baordList.jsp">관리자 페이지</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
-                <h2 class="page_tit">자료실</h2>
+                <h2 class="page_tit">관리자 페이지</h2>
                 <table class="tb1" id="myTable">
                     <thead>
                         <tr>
                             <th class="item1" style="text-align: center">번호</th>
-                            <th class="item2" style="text-align: center">제목</th>
-                            <th class="item3" style="text-align: center">작성자</th>
+                            <th class="item2" style="text-align: center">아이디</th>
+                            <th class="item3" style="text-align: center">이름</th>
+                            <th class="item3" style="text-align: center">가입일</th>
+                            <th class="item1" style="text-align: center">직업</th>
                             <th class="item1" style="text-align: center">비고</th>
                         </tr>
                     </thead>
                     <tbody>
                     <%
-                        int tot = files.length;
-                        for(String file : files) {
+                        int tot = memList.size();
+                        SimpleDateFormat ymd = new SimpleDateFormat("yy-MM-dd");
+                        for(Member arr:memList) {
+                        Date d = ymd.parse(arr.getRegdate());  //날짜데이터로 변경
+                        String date = ymd.format(d);    //형식을 포함한 문자열로 변경
                     %>
                     <tr>
                         <td class="item1"><%=tot-- %></td>
-                        <td class="item2">
-                            <a href="<%=request.getContextPath() %>downloadAction.jsp?file=<%=java.net.URLEncoder.encode(file, "UTF-8") %>
-                            "><%=file %>
-                            </a>
-                        </td>
-                        <td class="item3">admin</td>
-                        <td class="item1">
-                            <% if (sid != null && sid.equals("admin")) { %>
-                            <a href="deleteBoardpro.jsp?file=<%=file %>" class="inbtn delete_btn">삭제</a>
-                            <% } %>
-                        </td>
+                        <td class="item2"><%=arr.getId() %></td>
+                        <td class="item2"><%=arr.getName()%></td>
+                        <td class="item2"><%=date %></td>
+                        <td class="item1"><%= (arr.getJob() == 1 ? "학생" : "선생님") %></td>
+                        <td class="item1"><a href="/admin/deleteBoardpro.jsp?id=<%=arr.getId()%>" class="inbtn delete_btn" >탈퇴</a></td>
                     </tr>
                     <%
                         }
@@ -259,13 +274,6 @@
                     });
 
                 </script>
-                <div class="btn_group">
-                    <% if (sid != null && sid.equals("admin")) { %>
-                    <a href="fileUpload.jsp" class="inbtn"> 글 작성 </a>
-                    <% } else {%>
-                    <p>관리자만 글을 쓸 수 있습니다.</p>
-                    <% } %>
-                </div>
             </div>
         </section>
     </div>
