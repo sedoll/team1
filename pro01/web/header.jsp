@@ -9,14 +9,14 @@
             <li>안녕하세요,  <%=sname%>님</li> <!-- 로그인 한 회원의 이름 -->
             <li><a href=<%=path2%>"/member/mypage.jsp">마이페이지</a></li>
             <li><a href=<%=path2%>"/member/logout.jsp">로그아웃</a></li>
-            <li><a href=<%=path2%>"/member/map.jsp">고객센터</a></li>
+            <li><a href=<%=path2%>"/help/help.jsp">고객센터</a></li>
                 <% if(sid.equals("admin")) {%>
                 <li><a href=<%=path2%>"/member/index.jsp">관리자페이지</a></li>
                 <% } %>
             <% } else {%>
             <li><a href=<%=path2%>"/member/login.jsp">로그인</a></li>
             <li><a href=<%=path2%>"/member/term.jsp">회원가입</a></li>
-            <li><a href=<%=path2%>"/member/map.jsp">고객센터</a></li>
+            <li><a href=<%=path2%>"/help/help.jsp">고객센터</a></li>
             <% } %>
         </ul>
     </nav>

@@ -119,6 +119,18 @@ CREATE TABLE board_act(
 		CASCADE -- 작성자를 member id를 이용해 외래키로 사용
 );
 
+-- 공지사항
+create TABLE notice(
+	bno INT PRIMARY KEY AUTO_INCREMENT,
+	title VARCHAR(200) NOT NULL,
+	content VARCHAR(1000),
+	author VARCHAR(16), -- 작성자
+	resdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP(), -- 작성일
+	cnt INT DEFAULT 0 -- 조회수
+)
+
+INSERT INTO notice(title, content, author) VALUES('공지사항 제목', '공지사항 내용', 'admin');
+
 CREATE VIEW qnalist AS(SELECT q.qno AS qno, q.title AS title, q.content AS content, q.author AS author, 
 q.resdate AS resdate,q.cnt AS cnt, q.lev AS lev, q.par AS par, m.name AS name
 FROM qna_career q, member m WHERE q.author=m.id order BY q.par DESC, q.lev ASC, q.qno ASC);
