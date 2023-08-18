@@ -71,46 +71,20 @@ S
 #web/board_stu/deleteBoardStupro.jsp,5\d\5dc11d938766f5d640aecdc2f7aa9e384bb7bb26
 =
 web/index.jsp,9\f\9f198ed450f32e45b10ec3c2b1406e609b4a96cd
-K
-web/file/deleteBoardpro.jsp,e\e\ee6aa988061c2d5412eed770c8d583da607b003c
-K
-web/file/downloadAction.jsp,0\0\008ed0052c55e104d1169d58b28d1f4bfcd15c6c
-F
-web/file/fileUpPro.jsp,5\b\5b2923c2ae7a9b3fdc81e1a8a1ed103e68cf2f02
-J
-web/board_act/addBoard.jsp,2\5\25cfb34a66cde0d2308422c9ae6322657c6a5dee
-M
-web/board_act/addBoardpro.jsp,4\3\43f7cde527bdcdc246900d61234d8659a0c77802
-P
- web/board_act/deleteBoardpro.jsp,3\e\3e2e041a20f500949754a36f6060d540c5d94f32
-M
-web/board_act/updateBoard.jsp,2\6\26de11c7ccd70b1025d87ce74936b410e9fa3fcf
-P
- web/board_act/updateBoardpro.jsp,6\c\6c00cb5a07993ca0ad7755d4c37fd7c243a2e839
 M
 web/board_stu/getBoardStu.jsp,3\5\35ebcd6df902f15608699295616baaecc491d0ff
 J
 web/board_unv/addBoard.jsp,e\3\e3a8c114404128d57e18a5957501171fdbd6e59f
 P
  web/board_unv/deleteBoardpro.jsp,c\b\cb4705889aa73d58b511a14476e7b354c303b480
-K
-web/board_unv/boardList.jsp,f\0\f0d9e9f47c98f24b1e758b48b07931bd32b1e465
 M
 web/board_unv/addBoardpro.jsp,c\8\c8ab7c9623baf216c7d13d69d9a46eec93ebd3f3
-J
-web/board_act/getBoard.jsp,8\b\8bdd63685269ed905c0565d421bac0c867a0d282
 J
 web/board_unv/getBoard.jsp,0\a\0a12578b32bcd0ed97a90bb9290062728be67e9e
 B
 web/css/common.css,5\a\5a70d055aac54fd64871807275975852a461081b
-P
- web/board_unv/updateBoardpro.jsp,3\1\31d01f98a439e5d820f6ad885f4bdfb94c58f1c6
-M
-web/board_unv/updateBoard.jsp,0\6\06c4d1b677dec259a8a1362bea8d8a1e9f8d5c71
 @
 web/css/font.css,7\2\7211c2a5adf270eaee8dc3dc360099c75342cd40
-G
-web/file/fileUpload.jsp,8\2\82e0077cc8260399032af59d58e9199b78f046d8
 >
 web/js/load.js,f\0\f038d0b1ec1c19303e6d34d145ef19c50b9f6c3f
 D
@@ -119,8 +93,6 @@ D
 web/js/join.js,f\3\f397521416a28b08c8b5f9a05ec4b3b004812133
 A
 web/js/idcheck.js,d\d\dde5483b4a0834e8af59043a5cebdd5903c5d25e
-<
-web/head.jsp,4\a\4a87f90bffcdb4e9d2b938add5b82f2f1ade81b4
 F
 web/member/joinpro.jsp,c\7\c7f13c3f3dae4df8429e2a3f49fada911b1a8280
 C
@@ -131,7 +103,21 @@ C
 web/member/join.jsp,a\4\a4d706dcfd7ab74948ee4c3d4507aa85dbe3abf1
 E
 web/member/idload.jsp,b\0\b024b5113c5e63a7cbbaa0dacb73532c5fac423b
-D
-web/help/helpFAQ.jsp,2\0\20fb8662d5bd4bd7823b6bfe5bc1ecbbbb7ec7b3
-E
-web/help/addBoard.jsp,3\9\39d153d6df57d77aad42e9a22e8eacfc844a2fe2
+M
+web/board_unv/updateBoard.jsp,0\6\06c4d1b677dec259a8a1362bea8d8a1e9f8d5c71
+P
+ web/board_unv/updateBoardpro.jsp,3\1\31d01f98a439e5d820f6ad885f4bdfb94c58f1c6
+F
+web/file/fileUpPro.jsp,5\b\5b2923c2ae7a9b3fdc81e1a8a1ed103e68cf2f02
+F
+web/file/boardList.jsp,d\5\d51322d50f61babf278017bfb01d9476c5dd68e4
+>
+web/header.jsp,f\f\ff77691b3d429e53a4449f401a4cd692f37474d9
+<
+web/head.jsp,4\a\4a87f90bffcdb4e9d2b938add5b82f2f1ade81b4
+K
+web/file/downloadAction.jsp,0\0\008ed0052c55e104d1169d58b28d1f4bfcd15c6c
+G
+web/file/fileUpload.jsp,8\2\82e0077cc8260399032af59d58e9199b78f046d8
+K
+web/board_unv/boardList.jsp,f\0\f0d9e9f47c98f24b1e758b48b07931bd32b1e465
