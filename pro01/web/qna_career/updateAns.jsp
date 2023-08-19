@@ -78,6 +78,7 @@
             q.setAuthor(rs.getString("author"));
             q.setContent(rs.getString("content"));
         }
+        System.out.println(q.getTitle() + " " + q.getAuthor() + " " + q.getContent());
     } catch (SQLException e) {
         System.out.println("sql 연결 실패");
         e.printStackTrace();
@@ -94,8 +95,8 @@
     <div class="contents" id="contents">
         <div class="breadcrumb">
             <p>
-                <a href="/">HOME</a> &gt; <a href="/qna_career/qnaList.jsp">qnaa</a> &gt; <a href="/qna_career/qnaList.jsp">qna 상세</a>
-                &gt; <a href="/qna_career/qnaList.jsp">댓글 수정</a>
+                <a href="/">HOME</a> &gt; <a href="/qna_career/qnaList.jsp">진로상담</a> &gt; <a href="/qna_career/getQna.jsp?qno=<%=qno%>">상담 상세</a>
+                &gt; <a href="/qna_career/updateAns.jsp?qno=<%=qno%>">댓글 수정</a>
             </p>
         </div>
         <section class="page" id="page1">

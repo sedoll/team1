@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>게시판 상세보기</title>
+    <title>게시글 수정</title>
     <%@ include file="../head.jsp" %>
 
     <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
@@ -64,7 +64,6 @@
 <%
     Board q = new Board();
     int bno = Integer.parseInt(request.getParameter("bno"));
-    int lev = Integer.parseInt(request.getParameter("lev"));
     DBC con = new MariaDBCon();
     Connection conn = null;
     PreparedStatement pstmt = null;
@@ -105,13 +104,13 @@
     <div class="contents" id="contents">
         <div class="breadcrumb">
             <p>
-                <a href="/">HOME</a> &gt; <a href="/board_tea/boardTeaList.jsp">board</a> &gt; <a href="/board_tea/getBoardTea.jsp?bno<%=bno%>">board 상세</a>
-                &gt; <a href="/board_tea/boardTeaList.jsp">질문 수정</a>
+                <a href="/">HOME</a> &gt; <a href="/board_tea/boardTeaList.jsp">선생님 게시판</a> &gt; <a href="/board_tea/getBoardTea.jsp?bno=<%=bno%>">게시글 상세</a>
+                &gt; <a href="/board_tea/updateBoardTea.jsp?bno=<%=bno%>">게시글 수정</a>
             </p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
-                <h2 class="page_tit">게시글 상세</h2>
+                <h2 class="page_tit">게시글 수정</h2>
 
                     <form action="updateBoardTeapro.jsp" id="login_frm" class="frm">
                         <table class="tb1">
@@ -120,7 +119,7 @@
                                     <th class="item3">제목</th>
                                     <td><input type="text" name="title" id="title" class="indata" value="<%=q.getTitle()%>" autofocus required></td>
                                     <input type="hidden" name="bno" value="<%=bno%>" readonly>
-                                    <input type="hidden" name="lev" value="<%=lev%>" readonly>
+                                    <input type="hidden" name="lev" value="<%=0%>" readonly>
                                 </tr>
                                 <tr>
                                     <th colspan="2" class="item4">내용</th>

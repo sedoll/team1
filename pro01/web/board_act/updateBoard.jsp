@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>게시판 수정</title>
+    <title>게시글 수정</title>
     <%@ include file="../head.jsp" %>
 
     <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
@@ -135,8 +135,8 @@
     <div class="contents" id="contents">
         <div class="breadcrumb">
             <p>
-                <a href="/">HOME</a> &gt; <a href="/board/boardList.jsp">board</a> &gt; <a href="/board/boardList.jsp">board 상세</a>
-                &gt; <a href="/board/boardList.jsp">게시글 수정</a>
+                <a href="/">HOME</a> &gt; <a href="/board_act/boardList.jsp">대외활동</a> &gt; <a href="/board_act/getBoard.jsp?bno=<%=bno%>">게시글 상세</a>
+                &gt; <a href="/board_act/updateBoard.jsp?bno=<%=bno%>">게시글 수정</a>
             </p>
         </div>
         <section class="page" id="page1">

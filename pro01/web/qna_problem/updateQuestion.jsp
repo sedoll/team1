@@ -93,7 +93,6 @@
 <%
     Qna q = new Qna();
     int qno = Integer.parseInt(request.getParameter("qno"));
-    int lev = Integer.parseInt(request.getParameter("lev"));
 
     DBC con = new MariaDBCon();
     Connection conn = null;
@@ -135,8 +134,8 @@
     <div class="contents" id="contents">
         <div class="breadcrumb">
             <p>
-                <a href="/">HOME</a> &gt; <a href="/qna/qnaList.jsp">QNA</a> &gt; <a href="/qna/qnaList.jsp">QNA 상세</a>
-                &gt; <a href="/qna/qnaList.jsp">질문 수정</a>
+                <a href="/">HOME</a> &gt; <a href="qnaList.jsp">QNA</a> &gt; <a href="getQna.jsp?qno=<%=qno%>">질문 상세</a>
+                &gt; <a href="updateQuestion.jsp?qno=<%=qno%>">질문 수정</a>
             </p>
         </div>
         <section class="page" id="page1">
@@ -148,7 +147,7 @@
                                 <tr>
                                     <td colspan="2"><input type="text" name="title" id="title" class="indata" value="<%=q.getTitle()%>" autofocus required></td>
                                     <input type="hidden" name="qno" value="<%=qno%>" readonly>
-                                    <input type="hidden" name="lev" value="<%=lev%>" readonly>
+                                    <input type="hidden" name="lev" value="0" readonly>
                                 </tr>
                                 <tr>
                                     <td colspan="2"><textarea name="content" id="content" class="" cols="50" rows="15" maxlength="100" required><%=q.getContent()%></textarea></td>

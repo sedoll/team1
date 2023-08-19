@@ -219,7 +219,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board_stu/baordStuList.jsp">학생게시판</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="/board_stu/boardStuList.jsp">학생게시판</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">

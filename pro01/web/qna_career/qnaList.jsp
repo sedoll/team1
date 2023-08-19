@@ -124,11 +124,11 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/qna/qnaList.jsp">QNA</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="/qna_career/qnaList.jsp">진로상담</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
-                <h2 class="page_tit">QNA</h2>
+                <h2 class="page_tit">진로상담</h2>
                 <table class="tb1" id="myTable">
                     <thead>
                         <tr>

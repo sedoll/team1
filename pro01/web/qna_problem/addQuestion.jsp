@@ -96,8 +96,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="qnaList.jsp">QNA</a> &gt; <a href="getQna.jsp">QNA 상세</a>
-                &gt; <a href="addQuestion.jsp">QNA 질문 작성</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="qnaList.jsp">질문 QnA</a> &gt; <a href="addQuestion.jsp">질문 상세</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">

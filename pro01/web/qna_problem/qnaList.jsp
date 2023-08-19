@@ -212,7 +212,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/qna/qnaList.jsp">문제 QNA</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="qnaList.jsp">문제 QNA</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">

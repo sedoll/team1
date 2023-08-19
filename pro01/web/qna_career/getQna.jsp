@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QNA 상세보기</title>
+    <title>상담 상세</title>
     <%@ include file="../head.jsp" %>
 
     <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
@@ -155,7 +155,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="qnaList.jsp">상담 QNA</a> &gt; <a href="getQna.jsp?">진로 상담 상세</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="qnaList.jsp">진로 상담</a> &gt; <a href="getQna.jsp?qno=<%=qno%>">상담 상세</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
@@ -214,7 +214,7 @@
                     %>
                     <tr>
                         <td class="item1">
-                            <% if (sid != null && sid.equals(id2)) { %>
+                            <% if (sid != null && sid.equals(qnaList.get(i).getAuthor())) { %>
                             <a href="/qna_career/updateAns.jsp?qno=<%=qnaList.get(i).getQno()%>&lev=1" class="inbtn">수정</a>
                             <% } %>
                             <% if(sid!=null && (sid.equals(qnaList.get(i).getAuthor()) || sid.equals("admin")) && qnaList.get(i).getLev() != 0) { %>

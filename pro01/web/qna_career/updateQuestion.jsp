@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>게시판 상세보기</title>
+    <title>게시글 수정</title>
     <%@ include file="../head.jsp" %>
 
     <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
@@ -64,7 +64,6 @@
 <%
     Qna q = new Qna();
     int qno = Integer.parseInt(request.getParameter("qno"));
-    int lev = Integer.parseInt(request.getParameter("lev"));
     DBC con = new MariaDBCon();
     Connection conn = null;
     PreparedStatement pstmt = null;
@@ -105,8 +104,8 @@
     <div class="contents" id="contents">
         <div class="breadcrumb">
             <p>
-                <a href="/">HOME</a> &gt; <a href="/qna/qnaList.jsp">QNA</a> &gt; <a href="/qna/qnaList.jsp">QNA 상세</a>
-                &gt; <a href="/qna/qnaList.jsp">질문 수정</a>
+                <a href="/">HOME</a> &gt; <a href="/qna_career/qnaList.jsp">진로상담</a> &gt; <a href="/qna_career/getQna.jsp?qno=<%=qno%>">상담 상세</a>
+                &gt; <a href="/qna_career/updateQuestion.jsp?qno=<%=qno%>">질문 수정</a>
             </p>
         </div>
         <section class="page" id="page1">
@@ -120,7 +119,7 @@
                                     <th class="item3">제목</th>
                                     <td><input type="text" name="title" id="title" class="indata" value="<%=q.getTitle()%>" autofocus required></td>
                                     <input type="hidden" name="qno" value="<%=qno%>" readonly>
-                                    <input type="hidden" name="lev" value="<%=lev%>" readonly>
+                                    <input type="hidden" name="lev" value="0" readonly>
                                 </tr>
                                 <tr>
                                     <th colspan="2" class="item4">내용</th>

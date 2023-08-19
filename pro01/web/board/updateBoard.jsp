@@ -134,8 +134,8 @@
     <div class="contents" id="contents">
         <div class="breadcrumb">
             <p>
-                <a href="/">HOME</a> &gt; <a href="/board/boardList.jsp">board</a> &gt; <a href="/board/boardList.jsp">board 상세</a>
-                &gt; <a href="/board/boardList.jsp">게시글 수정</a>
+                <a href="/">HOME</a> &gt; <a href="/board/boardList.jsp">자유게시판</a> &gt; <a href="/board/getBoard.jsp?bno=<%=bno%>">게시글 상세</a>
+                &gt; <a href="/board/updateBoard.jsp?bno=<%=bno%>">게시글 수정</a>
             </p>
         </div>
         <section class="page" id="page1">

@@ -301,7 +301,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="qnaList.jsp">문제 QNA</a> &gt; <a href="qnaList.jsp">문제 QNA 상세</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="qnaList.jsp">문제 QNA</a> &gt; <a href="getQna.jsp?qno=<%=qno%>">질문 상세</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">

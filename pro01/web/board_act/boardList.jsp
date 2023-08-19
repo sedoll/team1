@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>입시 정보</title>
+    <title>대외 활동</title>
     <%@ include file="../head.jsp" %>
 
     <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
@@ -212,7 +212,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board/baordList.jsp">대외활동</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="/board_act/baordList.jsp">대외활동</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
