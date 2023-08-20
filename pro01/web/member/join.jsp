@@ -535,7 +535,7 @@
                                 받습니다.
                             </div>
 
-                            <div class="btn_fr"><input type="checkbox" id="ck_item1" name="ck_item1"> <label
+                            <div class="btn_fr"><input type="checkbox" id="ck_item1" name="ck_item1" required> <label
                                     for="ck_item1">약관의 동의</label>
                             </div>
                         </div>
