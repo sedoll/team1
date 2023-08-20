@@ -87,8 +87,6 @@ J
 web/board_act/addBoard.jsp,2\5\25cfb34a66cde0d2308422c9ae6322657c6a5dee
 K
 web/board_unv/boardList.jsp,f\0\f0d9e9f47c98f24b1e758b48b07931bd32b1e465
-K
-web/board_act/boardList.jsp,d\f\dfd2300cd43ee25e610f0e5c02b1687934acf9c4
 M
 web/board_act/updateBoard.jsp,2\6\26de11c7ccd70b1025d87ce74936b410e9fa3fcf
 J
@@ -110,14 +108,6 @@ $web/qna_career/updateQuestionpro.jsp,b\b\bb4c76b77d0cc503f8223c08d63addab0d82e
 G
 web/board/updateAns.jsp,0\d\0d4cd83edf69a16b2322a6d317b8d64b0a74d0b2
 N
-web/board_stu/boardStuList.jsp,0\b\0bf70cb818d0bde429debc93b410153ea93f6d63
-M
-web/board_stu/getBoardStu.jsp,3\5\35ebcd6df902f15608699295616baaecc491d0ff
-N
-web/board_tea/boardTeaList.jsp,8\8\8816e5fe23a53590a069beb1958cdaf689a9ee6a
-G
-web/board/boardList.jsp,2\a\2ac18a427f434a0841ff447d977ca9e9581f923d
-N
 web/board_stu/updateAnsStu.jsp,7\d\7de013d15d48ed683393eb98b142fc822eb06615
 S
 #web/board_stu/updateBoardStupro.jsp,e\4\e4a632de81f518c55aae814437fb033680772774
@@ -137,7 +127,5 @@ Q
 !web/qna_career/updateQuestion.jsp,d\d\dd6b61c39698f2d48d940bd2a9ce5bfc0a852268
 M
 web/qna_problem/updateAns.jsp,9\0\90d5fe51e0a09cecf33556f052815690001498e7
-K
-web/qna_problem/qnaList.jsp,0\4\040610876b9a417425b3764feee320d58808cf95
 F
 web/board/getBoard.jsp,8\6\86f6680ef4b667a441b16a13e6f448d04f99cfb2

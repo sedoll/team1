@@ -125,8 +125,7 @@
             width: 8%;
         }
         .tb1 .item2 {
-            width: 60%;
-
+            width: 50%;
             text-align: left;
         }
         .tb1 .item3 {
