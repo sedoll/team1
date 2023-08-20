@@ -72,8 +72,8 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="qnaList.jsp">진로상담</a> &gt; <a href="getQna.jsp">상담 상세</a>
-                &gt; <a href="addAns.jsp">댓글 작성</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="qnaList.jsp">QNA</a> &gt; <a href="getQna.jsp">QNA 상세</a>
+                &gt; <a href="addAns.jsp">상담 댓글 작성</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">

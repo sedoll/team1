@@ -30,28 +30,45 @@
         .contents { clear:both; min-height: 100vh; background-image: url("../img/login.jpg");
             background-repeat: no-repeat; background-position: center -250px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
+
         .page { clear:both; width: 100vw; height: 100vh; position:relative; }
         .page::after { content:""; display:block; width: 100%; clear:both; }
+
         .page_wrap { clear:both; width: 1200px; height: auto; margin:0 auto; }
-        .page_tit { font-size:48px; text-align: center; padding-top:0.7em; color:#fff;
+        .page_tit { font-size:48px; text-align: center; color:#fff;
             padding-bottom: 1.3em; }
+
         .breadcrumb { clear:both;
             width:1200px; margin: 0 auto; text-align: right; color:#fff;
             padding-top: 28px; padding-bottom: 28px; }
         .breadcrumb a { color:#fff; }
-        .frm { clear:both; width:1200px; margin:0 auto; padding-top: 80px; }
+        .frm { clear:both; width:1200px; margin:0 auto; padding-top: 20px; }
+
         .tb1 { width:600px; margin:0 auto; font-size: 24px;}
         .tb1 th {line-height: 32px; padding-top:16px; padding-bottom:16px;
-            border-bottom: 1px solid #333; border-top: 1px solid #333; box-sizing: border-box; text-align: center;}
+            border-bottom: 1px solid #333;  box-sizing: border-box; text-align: center;}
         .tb1 td {line-height: 32px; padding-top:16px; padding-bottom:16px;
-            border-bottom: 1px solid #333; border-top: 1px solid #333; box-sizing: border-box; text-align: center;}
+            border-bottom: 1px solid #333;  box-sizing: border-box; text-align: center;}
+
         .indata { display:inline-block; width: 400px; height: 32px; line-height: 32px;
             text-indent:14px; font-size:14px; }
-        .inbtn { display:block;  border-radius:100px;
-            min-width:140px; padding-left: 24px; padding-right: 24px; text-align: center;
-            line-height: 48px; background-color: #333; color:#fff; font-size: 18px; cursor: pointer; }
+        .inbtn { display:block;
+            border-radius:10px;
+            min-width:120px;
+            padding-left: 24px;
+            padding-right: 24px;
+            text-align: center;
+            line-height: 38px;
+            background-color: #333;
+            color:#fff;
+            font-size: 18px;
+            cursor: pointer; }
         .inbtn:first-child { float:left; }
         .inbtn:last-child { float:right; }
+
+        .inbtn:hover {
+            background-color: #666666;
+        }
     </style>
 </head>
 
@@ -105,9 +122,6 @@
                     <table class="tb1">
                         <tbody>
                         <tr>
-                            <th colspan="2" class="item4">내용</th>
-                        </tr>
-                        <tr>
                             <td colspan="2"><textarea name="content" id="content" class="" cols="80" rows="15" maxlength="100" autofocus required><%=q.getContent()%></textarea></td>
                             <input type="hidden" name="lev" id="lev" value="1" readonly>
                             <input type="hidden" name="bno" value="<%=bno%>" readonly>
@@ -116,7 +130,7 @@
                         <tr>
                             <td colspan="2">
                                 <input type="submit" value="수정" class="inbtn">
-                                <input type="reset" value="취소" class="inbtn">
+                                <input type="reset" value="취소" class="inbtn" onclick="window.history.back();">
                             </td>
                         </tr>
                         </tbody>
