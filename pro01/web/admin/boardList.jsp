@@ -246,7 +246,7 @@
                 <script>
                     $(document).ready( function () {
                         $('#myTable').DataTable({
-                            order: [[0, 'desc']], // 0번째 컬럼을 기준으로 내림차순 정렬
+                            order: [[3, 'desc']], // 0번째 컬럼을 기준으로 내림차순 정렬
                             info: false,
                             dom: 'lt<f>p',
                             language: {
