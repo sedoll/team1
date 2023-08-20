@@ -413,7 +413,7 @@
                             <input type="hidden" name="qno" value="<%=qno%>" readonly>
                             <input type="hidden" name="id" value="<%=sid%>" readonly>
                             <% }  else {%>
-                            <p id="nologin_comment">댓글을 작성하려면 로그인하세요</p>
+                            <p id="nologin_comment">작성자와 선생님만 댓글을 쓸 수 있습니다.</p>
                             <% } %>
                         </tr>
                         </tbody>

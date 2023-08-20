@@ -412,6 +412,6 @@
 <footer class="ft" id="ft">
     <%@include file="footer.jsp"%>
 </footer>
-<a href="#" class="totop">위로</a>
+<a href="#" class="totop">위</a>
 </body>
 </html>
