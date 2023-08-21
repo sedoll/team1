@@ -1,6 +1,6 @@
 # &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;천재교육 풀스택 과정 1차 프로젝트 
 
-![스크린샷 2023-08-16 220827](https://github.com/kuyejin/project1/assets/65212187/e5da7ce5-3c8e-4b2b-a283-164cbd2fa902)
+![스크린샷 2023-08-16 220827](https://drive.google.com/file/d/1FmYvQeWrP4fiMlKG6mhpWUrdObqFd1sF/view?usp=sharing)
 
 
 
@@ -15,7 +15,7 @@
  <br/> <br/>
  
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🔹TEENTALK🔹에 대해 자세히 설명해 드릴게요!
-### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[🙋‍♀️ CLIKE ME (작성 중)🙋](https://drive.google.com/file/d/1UGHN_bC1933wXRF71-rOKsVdkzJZ5uxV/view?usp=drive_link    )
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[🙋‍♀️ CLIKE ME (１차 수정 완)🙋](https://drive.google.com/file/d/1FmYvQeWrP4fiMlKG6mhpWUrdObqFd1sF/view?usp=drive_link)
 <br/>
   
 
@@ -75,18 +75,23 @@
 
 #  📊 데이터베이스 설계
 
-## 1️⃣ 요구사항 분석
+## 1. 요구사항 정의
+![슬라이드1](/요구사항/요구사항정의서1.PNG)
+![슬라이드2](/요구사항/요구사항정의서2.PNG)
+![슬라이드3](/요구사항/요구사항정의서3.PNG)
+
+## 2. 요구사항 분석
 ![슬라이드1](https://github.com/kuyejin/project1/assets/65212187/55be3641-041a-4677-910a-fc34cdf579e4)
 ![슬라이드2](https://github.com/kuyejin/project1/assets/65212187/ac3b3d27-b9ef-453f-bf0b-760b0b084832)
 ![슬라이드3](https://github.com/kuyejin/project1/assets/65212187/8f76c49e-68b3-4d2d-b1be-4842e110b9f1)
 
-## 2️⃣ 개념적 설계
+## 3. 개념적 설계
 
 ### 🔹유즈케이스 (USE CASE)
 ![유즈케이스](https://github.com/kuyejin/project1/assets/65212187/06b63eab-69a5-4a46-a687-ee9504319ed1)
 
 
-## 3️⃣ 논리적 설계
+## 4. 논리적 설계
 ![슬라이드1](https://github.com/kuyejin/project1/assets/65212187/35d3ae6b-baaa-493a-9717-7024ec0ac7f5)
 ![슬라이드2](https://github.com/kuyejin/project1/assets/65212187/5b853237-7dc0-4d07-bf1f-0caff9f5dab9)
 ![슬라이드3](https://github.com/kuyejin/project1/assets/65212187/b2d8fc47-08d9-4a4b-8ad0-70d579c0dab7)
@@ -94,16 +99,26 @@
 ![슬라이드5](https://github.com/kuyejin/project1/assets/65212187/904508aa-1339-40e3-ab24-a0102b45b9aa)
 ![슬라이드6](https://github.com/kuyejin/project1/assets/65212187/be2d5150-d885-412e-b087-6fe975a768f9)
 ![슬라이드7](https://github.com/kuyejin/project1/assets/65212187/2b3693ef-d1d1-4ee6-b94a-5a2a7f320d38)
-## 4️⃣ 물리적 설계
-![team1 - member](https://github.com/kuyejin/project1/assets/65212187/b05df6bc-a97f-4b1e-8e88-ce469779a794)  
+## 5. 물리적 설계 － ＥＲＤ
+![erd](https://github.com/kuyejin/project1/assets/65212187/ac23429a-2d06-4bdd-9518-ea4de8f3c31a) 
 
 <br/>
+<br/>
+
+# 📐 WBS
+![wbs1](/wbs/WBS양식_TEENTALK_1.png)
+![wbs2](/wbs/WBS양식_TEENTALK_2.png)
 <br/>
 
 # 📐 클래스 다이어그램
-![클래스다이어그램 (1)](https://github.com/kuyejin/project1/assets/65212187/ac5f2d7f-f8dc-4d6c-b0c4-9f3d390cc4ae)  
+![classdiagram](https://github.com/kuyejin/project1/assets/65212187/c1264b55-6400-42eb-a12a-e85b775ce4c6)
 
 <br/>
+
+
+# 📐 시퀀스 다이어그램
+![시퀀스 다이어그램](https://github.com/kuyejin/project1/assets/65212187/bb0d5c21-7482-4c25-8cfc-04ec8bc888f3)
+
 <br/>
 
 #  💻 화면 설계도
@@ -195,5 +210,9 @@
 🔹글 상세 보기
 <img width="1058" alt="QnA - 글 상세 보기" src="https://github.com/sedoll/team_pro1/assets/65212187/e4f09cbb-e9f8-4815-a9ba-78e5cdc8cf46">
 
-wbs
-https://docs.google.com/spreadsheets/d/1uggY29M2T0PDeETI_aQ5_6qshI4JadBXmnfXXcA_nOI/edit#gid=1473426865
+ 🔹결과 영상 - 학생 회원
+ ![학생회원](/결과영상/학생회원.gif)<br/>
+  🔹결과 영상 - 선생님 회원
+ ![학생회원](/결과영상/선생님회원.gif)<br/>
+  🔹결과 영상 - 비회원
+ ![학생회원](/결과영상/비회원.gif)<br/>
