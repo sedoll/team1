@@ -111,7 +111,7 @@
             display: block;
             width: 100%;
             text-align: center;
-            background-color: rgb(127, 179, 250);
+            background-color: rgba(127, 179, 250, 0.5);
         }
 
         .tab_box li label:hover {
@@ -125,12 +125,12 @@
         }
 
         .con_tit {
-            font-size: 46px;
+            font-size: 34px;
             line-height: 1.3;
         }
 
         .cont {
-            font-size: 24px;
+            font-size: 23px;
             margin-top: 50px;
             color: #585858;
         }
@@ -154,8 +154,43 @@
         .ra1:checked #map {display: block;}
         /*.ra1:checked + #tab2 {height: 800px;} 버튼이 체크 되어 있으면*/
 
+        .back_bread{
+            height: 165px;
+        }
 
-        /*.maparea { }*/
+        #map1 .cnt{
+            font-size: 1.5rem;
+            color: #666;
+        }
+
+        #map1 .tit{
+            letter-spacing: 2px;
+            font-size: 1.167rem;
+            color: #9fa3a7;
+            font-family: roboto;
+            font-weight: 700;
+            margin-bottom: 0.833rem;
+        }
+
+        #map1 h3{
+            margin-top: 1.5rem;
+            font-size: 2.167rem;
+            font-weight: 500;
+            margin-bottom: 4.167rem;
+        }
+
+        #map1 p{
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+
+        }
+
+        .maparea{
+            float: right;
+        }
     </style>
 </head>
 <body>
@@ -185,20 +220,21 @@
             <input type="radio" name="ra1" class="ra1" id="com" checked/>
             <section class="page" id="com">
                 <div class="page_wrap">
-                    <h2 class="page_tit">TeenTalk 소개</h2>
+                    <h2 class="page_tit">TeenTalk은?</h2>
                     <div class="com_content">
-                        <h3 class="con_tit">학생과 선생님들 모두 함께 이야기하며</h3>
-                        <h3 class="con_tit">쉴 수 있는 <span class="highlight">소통의 광장</span>이 되겠습니다.</h3>
-                        <p class="cont">TeenTalk은 학생들 뿐만 아니라 선생님들도 함께 할 수 있는 <br>
-                            커뮤니티 사이트 입니다.<br><br>
+                        <h3 class="con_tit">학생과 선생님들이 함께</h3>
+                        <h3 class="con_tit">정보를 나누며 쉬어갈 수 있는</h3>
+                        <h3 class="con_tit"><span class="highlight">소통의 광장</span>이 되겠습니다.</h3>
+                        <p class="cont">TeenTalk은 학생들 뿐만 아니라 선생님들도 함께 할 수 있는 커뮤니티 사이트 입니다.<br><br>
 
-                            학생들에겐 다른 친구들과 소통이 가능한 게시판들과 선생님들에게서<br>
+                            학생들에겐 다른 친구들과 소통이 가능한 게시판들과 선생님들에게서
                             입시를 위한 진로 상담도 가능합니다.<br><br>
 
-                            선생님들에겐 입시 또는 학교생활에 많은 궁금증을 가지고 있는 학생들에게
-                            상담과 입시 정보 등을 공유 해줄 수 있으며, <br>
-                            다른 선생님들과 소통하며 학교 업무에 유용한 정보들을 들을 수 있는 게시판을
-                            제공하고 있습니다.</p>
+                            방문하는 선생님들에겐 학생들에게 많은 도움을 줄 수 있는 진로 상담과
+                            입시 정보 게시판 및 자유 게시판을, <br><br>
+
+                            학생들에겐 가장 관심이 많을 입시 관련 정보와 다른 친구들과 함께 얘기하고
+                            정보를 나눌 수 있는 공간을 제공하고 있습니다.</p>
                     </div>
                     <img src="../img/ogu2.png" alt="" class="com_img">
                 </div>
@@ -206,13 +242,27 @@
 
             <input type="radio" name="ra1" class="ra1" id="map1"/>
             <section class="page" id="map1">
-                <div class="page_wrap">
+                <div class="page_wrap" id="map1">
                     <h2 class="page_tit">오시는길</h2>
                     <div class="maparea">
                         <div id="map" style="width:500px;height:400px;"></div>
                         <!-- 보안성을 위해 자바스크립트에서 실행후 불러옴-->
                         <script type="text/javascript" src="../api/kakaoMap.js"></script>
                     </div>
+                        <h3>TEENTALK 본사</h3>
+                    <div class="address">
+                        <p class="tit">ADDRESS</p>
+                        <p class="cnt">서울시 금천구 가산로 9길 54</p>
+                        <p class="cnt">[가산디지털단지 6번 출구 도보 15분 이내]</p>
+                    </div>
+                        <div class="tel">
+                            <p class="tit">TEL</p>
+                            <p class="cnt">1577-0902</p>
+                        </div>
+                        <div class="fax">
+                            <p class="tit">FAX</p>
+                            <p class="cnt">02-866-9309</p>
+                        </div>
                 </div>
             </section>
         </div>
