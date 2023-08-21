@@ -1,6 +1,6 @@
 # &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;천재교육 풀스택 과정 1차 프로젝트 
 
-![스크린샷 2023-08-16 220827](https://drive.google.com/file/d/1FmYvQeWrP4fiMlKG6mhpWUrdObqFd1sF/view?usp=sharing)
+![스크린샷 2023-08-16 220827](https://github.com/kuyejin/project1/assets/65212187/f39cc81a-69f1-41b5-91da-d931e07586b7)
 
 
 
