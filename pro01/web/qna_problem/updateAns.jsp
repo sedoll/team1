@@ -112,8 +112,8 @@
     <div class="contents" id="contents">
         <div class="breadcrumb">
             <p>
-                <a href="/">HOME</a> &gt; <a href="/qna_problem/qnaList.jsp">qna_problem</a> &gt; <a href="/qna_problem/qnaList.jsp">qna_problem 상세</a>
-                &gt; <a href="/qna_problem/qnaList.jsp">댓글 수정</a>
+                <a href="/">HOME</a> &gt; <a href="qnaList.jsp">질문 QnA</a> &gt; <a href="getQna.jsp?qno=<%=qno%>">질문 상세</a>
+                &gt; <a href="updateAns.jsp?qno=<%=qno%>">댓글 수정</a>
             </p>
         </div>
         <section class="page" id="page1">

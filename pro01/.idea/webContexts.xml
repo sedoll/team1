@@ -6,6 +6,7 @@
         <entry key="file://$PROJECT_DIR$/web/board/boardList.jsp" value="file://$PROJECT_DIR$/web/board" />
         <entry key="file://$PROJECT_DIR$/web/board/getBoard.jsp" value="file://$PROJECT_DIR$/web/board" />
         <entry key="file://$PROJECT_DIR$/web/board/updateBoardpro.jsp" value="file://$PROJECT_DIR$/web/board" />
+        <entry key="file://$PROJECT_DIR$/web/board_stu/boardStuList.jsp" value="file://$PROJECT_DIR$/web/board_stu" />
         <entry key="file://$PROJECT_DIR$/web/board_stu/updateBoardStupro.jsp" value="file://$PROJECT_DIR$/web/board_stu" />
         <entry key="file://$PROJECT_DIR$/web/index.jsp" value="file://$PROJECT_DIR$/web" />
         <entry key="file://$PROJECT_DIR$/web/member/loginpro.jsp" value="file://$PROJECT_DIR$/web/member" />

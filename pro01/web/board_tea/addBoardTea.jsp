@@ -32,7 +32,7 @@
         .page::after { content:""; display:block; width: 100%; clear:both; }
 
         .page_wrap { clear:both; width: 1200px; height: auto; margin:0 auto; }
-        .page_tit { font-size:48px; text-align: center; padding-top:0.7em; color:#fff;
+        .page_tit { font-size:48px; text-align: center;  color:#fff;
             padding-bottom: 1.3em; }
 
         .breadcrumb { clear:both;
@@ -48,16 +48,43 @@
 
         .tb1 td:last-child { line-height: 48px; padding-top:24px; padding-bottom:24px; }
 
-        .indata { display:inline-block; width: 400px; height: 32px; line-height: 32px;
-            text-indent:14px; font-size:14px; }
-        .inbtn { display:block;  border-radius:100px;
-            min-width:140px; padding-left: 24px; padding-right: 24px; text-align: center;
-            line-height: 48px; background-color: #333; color:#fff; font-size: 18px; cursor: pointer; }
+
+        .inbtn { display:block;
+            border-radius:10px;
+            min-width:120px;
+            padding-left: 24px;
+            padding-right: 24px;
+            text-align: center;
+            line-height: 38px;
+            background-color: #333;
+            color:#fff;
+            font-size: 18px;
+            cursor: pointer; }
         .inbtn:first-child { float:left; }
         .inbtn:last-child { float:right; }
 
         .inbtn:hover {
             background-color: #666666;
+        }
+        .indata {
+            display:inline-block;
+            width: 590px;
+            height: 32px;
+            line-height: 32px;
+            text-indent:10px;
+            font-size:16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px 15px;
+        }
+
+        textarea {
+            resize: none;
+            width: 600px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size:16px;
         }
 
     </style>
@@ -69,7 +96,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board_tea/boardTeaList.jsp">학생게시판</a>
+            <p><a href="/">HOME</a> &gt; <a href="/board_tea/boardTeaList.jsp">선생님 게시판</a>
                 &gt; <a href="/board_tea/addBoardTea.jsp">게시글 작성</a></p>
         </div>
         <section class="page" id="page1">
@@ -79,17 +106,15 @@
                     <table class="tb1">
                         <tbody>
                         <tr>
-                            <th><label for="title">게시글 제목</label></th>
-                            <td><input type="text" name="title" id="title" class="indata" placeholder="제목 입력" autofocus required></td>
+                            <td colspan="2"><input type="text" name="title" id="title" class="indata" placeholder="제목 입력" autofocus required></td>
                         </tr>
                         <tr>
-                            <th><label for="content">게시글 내용</label></th>
-                            <td><textarea name="content" id="content" cols="50" rows="15" placeholder="내용 입력" required></textarea></td>
+                            <td colspan="2"><textarea name="content" id="content" cols="50" rows="15" placeholder="내용 입력" required></textarea></td>
                         </tr>
                         <tr>
                             <td colspan="2">
                                 <input type="submit" value="글쓰기" class="inbtn">
-                                <input type="reset" value="내용 리셋" class="inbtn">
+                                <input type="reset" value="취소" class="inbtn" onclick="window.history.back();">
                             </td>
                         </tr>
                         </tbody>

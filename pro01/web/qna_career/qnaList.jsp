@@ -36,43 +36,132 @@
     <link rel="stylesheet" href="../css/ft.css">
     <style>
         /* 본문 영역 스타일 */
-        .contents { clear:both; min-height: 100vh; background-image: url("../img/login.jpg");
-            background-repeat: no-repeat; background-position: center -250px; }
-        .contents::after { content:""; clear:both; display:block; width:100%; }
+        .contents {
+            clear: both;
+            min-height: 100vh;
+            background-image: url("../img/login.jpg");
+            background-repeat: no-repeat;
+            background-position: center -250px;
+        }
+        .contents::after {
+            content: "";
+            clear: both;
+            display: block;
+            width: 100%;
+        }
 
-        .page { clear:both; width: 100vw; height: 100vh; position:relative; }
-        .page::after { content:""; display:block; width: 100%; clear:both; }
+        .page {
+            clear: both;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        .page::after {
+            content: "";
+            display: block;
+            width: 100%;
+            clear: both;
+        }
 
-        .page_wrap { clear:both; width: 1200px; height: auto; margin:0 auto; }
-        .page_tit { font-size:48px; text-align: center; padding-top:0.7em; color:#fff;
-            padding-bottom: 1.3em; }
+        .page_wrap {
+            clear: both;
+            width: 1200px;
+            height: auto;
+            margin: 0 auto;
 
-        .breadcrumb { clear:both;
-            width:1200px; margin: 0 auto; text-align: right; color:#fff;
-            padding-top: 28px; padding-bottom: 28px; }
-        .breadcrumb a { color:#fff; }
+        }
+        .page_tit {
+            font-size: 48px;
+            text-align: center;
+            /*padding-top: 0.7em;*/
+            color: #fff;
+            padding-bottom: 1.3em;
+        }
 
-        .tb1 { width:600px; margin:0 auto; font-size: 24px;}
-        .tb1 th {line-height: 32px; padding-top:16px; padding-bottom:16px;
-            border-bottom: 1px solid #333; border-top: 1px solid #333; box-sizing: border-box; text-align: center;}
-        .tb1 td {line-height: 32px; padding-top:16px; padding-bottom:16px;
-            border-bottom: 1px solid #333; border-top: 1px solid #333; box-sizing: border-box; text-align: center;}
+        .breadcrumb {
+            clear: both;
+            width: 1200px;
+            margin: 0 auto;
+            text-align: right;
+            color: #fff;
+            padding-top: 28px;
+            padding-bottom: 28px;
+        }
+        .breadcrumb a {
+            color: #fff;
 
-        .tb1 .item1 { width: 10%;}
-        .tb1 .item2 {width: 60%;}
-        .tb1 .item3 {width: 10%;}
-        .tb1 .item4 {width: 20%;}
+        }
 
-        .inbtn { display:block;  border-radius:100px;
-            min-width:140px; padding-left: 24px; padding-right: 24px; text-align: center;
-            line-height: 48px; background-color: #333; color:#fff; font-size: 18px; float:right;
-            cursor: pointer;}
+        /* 테이블 스타일 */
+        .tb1 {
+            width: 80%;
+            margin: 50px auto;
+            font-size: 20px;
+            border-collapse: collapse;
+        }
+        .tb1 th {
+            background-color: #527AF2;
+            color: #fff;
+            padding: 16px;
+            border: 1px solid #527AF2;
 
+        }
+        .tb1 td {
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            text-align: center;
+            line-height: 24px;
+
+        }
+        .tb1 th:first-child {
+            width: 40px;
+        }
+
+        .tb1 tbody {
+
+        }
+
+        .tb1 .item1 {
+            width: 8%;
+        }
+        .tb1 .item2 {
+            width: 60%;
+            text-align: left;
+        }
+        .tb1 .item3 {
+            width: 12%;
+        }
+
+        /* 기타 버튼 스타일 */
+        .inbtn {
+            display: block;
+            border-radius: 10px;
+            min-width: 60px;
+            padding-left: 24px;
+            padding-right: 24px;
+            text-align: center;
+            line-height: 38px;
+            background-color: #527AF2;
+            color: #fff;
+            font-size: 18px;
+            float: right;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+        }
         .inbtn:hover {
             background-color: #666666;
         }
 
-        .btn_group { margin-top: 20px;}
+        .btn_group {
+            margin-top: -38px;
+            z-index: 1000;
+            position: relative;
+        }
+        .btn_group p {
+            float: right;
+
+        }
     </style>
 </head>
 
@@ -124,18 +213,18 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/qna/qnaList.jsp">QNA</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="/qna_career/qnaList.jsp">진로상담</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
-                <h2 class="page_tit">QNA</h2>
+                <h2 class="page_tit">진로상담</h2>
                 <table class="tb1" id="myTable">
                     <thead>
                         <tr>
-                            <th class="item1">번호</th>
-                            <th class="item2">제목</th>
-                            <th class="item3">작성자</th>
-                            <th class="item4">작성일</th>
+                            <th class="item1" style="text-align: center">번호</th>
+                            <th class="item2" style="text-align: center">제목</th>
+                            <th class="item3" style="text-align: center">작성자</th>
+                            <th class="item4" style="text-align: center">작성일</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -167,8 +256,31 @@
                     $(document).ready( function () {
                         $('#myTable').DataTable({
                             order: [[0, 'desc']], // 0번째 컬럼을 기준으로 내림차순 정렬
+                            info: false,
+                            dom: 'lt<f>p',
+                            language: {
+                                emptyTable: '작성된 글이 없습니다.'
+                            }
+
                         });
                     } );
+                    $(document).ready(function() {
+                        $('.dataTables_paginate').css({
+                            'textAlign':'left',
+                            'float': 'none',
+                            'margin-top':'10px',
+                        });
+                        $('.dataTables_filter').css({
+                            'float': 'left',
+                            'margin-top':'14px',
+                            'margin-right':'280px'
+                        });
+                        $('#myTable_paginate').css({
+                            'margin-right':'100px'
+                        });
+
+                    });
+
                 </script>
                 <div class="btn_group">
                     <% if (sid != null && (sjob.equals("1") || sid.equals("admin"))) { %>

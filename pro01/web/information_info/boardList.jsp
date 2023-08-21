@@ -261,12 +261,12 @@
                         <li>
                             <div class="uni_info">
                                 <div class="tit">
-                                    <a href="http://www.kaya.ac.kr/Home/Main.mbz" class="name">
-                                        가야대학교</a>
+                                    <a href="https://www.snu.ac.kr/" class="name" target="_blank">
+                                        서울대학교</a>
                                 </div>
                                 <div class="a_group">
-                                    <a href="" class="a_tag" ><span>대학별 고사</span></a>
-                                    <a href="" class="a_tag" ><span>목표대학 설정</span></a>
+                                    <a href="" class="a_tag" target="_blank"><span>대학별 고사</span></a>
+                                    <a href="" class="a_tag" target="_blank"><span>목표대학 설정</span></a>
                                 </div>
                             </div>
                         </li>
@@ -275,12 +275,12 @@
                         <li>
                             <div class="uni_info">
                                 <div class="tit">
-                                    <a href="http://www.kaya.ac.kr/Home/Main.mbz" class="name">
-                                        가야대학교</a>
+                                    <a href="https://www.yonsei.ac.kr/sc/" class="name" target="_blank">
+                                        연세대학교</a>
                                 </div>
                                 <div class="a_group">
-                                    <a href="" class="a_tag" ><span>대학별 고사</span></a>
-                                    <a href="" class="a_tag" ><span>목표대학 설정</span></a>
+                                    <a href="" class="a_tag" target="_blank"><span>대학별 고사</span></a>
+                                    <a href="" class="a_tag" target="_blank"><span>목표대학 설정</span></a>
                                 </div>
                             </div>
                         </li>
@@ -289,12 +289,12 @@
                         <li>
                             <div class="uni_info">
                                 <div class="tit">
-                                    <a href="http://www.kaya.ac.kr/Home/Main.mbz" class="name">
-                                        가야대학교</a>
+                                    <a href="https://www.korea.ac.kr/mbshome/mbs/university/index.do" class="name" target="_blank">
+                                        고려대학교</a>
                                 </div>
                                 <div class="a_group">
-                                    <a href="" class="a_tag" ><span>대학별 고사</span></a>
-                                    <a href="" class="a_tag" ><span>목표대학 설정</span></a>
+                                    <a href="" class="a_tag" target="_blank"><span>대학별 고사</span></a>
+                                    <a href="" class="a_tag" target="_blank"><span>목표대학 설정</span></a>
                                 </div>
                             </div>
                         </li>
@@ -303,12 +303,12 @@
                         <li>
                             <div class="uni_info">
                                 <div class="tit">
-                                    <a href="http://www.kaya.ac.kr/Home/Main.mbz" class="name">
-                                        가야대학교</a>
+                                    <a href="https://www.kaist.ac.kr/kr/" class="name" target="_blank">
+                                        홍익대학교</a>
                                 </div>
                                 <div class="a_group">
-                                    <a href="" class="a_tag" ><span>대학별 고사</span></a>
-                                    <a href="" class="a_tag" ><span>목표대학 설정</span></a>
+                                    <a href="" class="a_tag" target="_blank"><span>대학별 고사</span></a>
+                                    <a href="" class="a_tag" target="_blank"><span>목표대학 설정</span></a>
                                 </div>
                             </div>
                         </li>
@@ -316,12 +316,12 @@
                         <li>
                             <div class="uni_info">
                                 <div class="tit">
-                                    <a href="http://www.kaya.ac.kr/Home/Main.mbz" class="name">
-                                        가야대학교</a>
+                                    <a href="https://sogang.ac.kr/index.do" class="name" target="_blank">
+                                        서강대학교</a>
                                 </div>
                                 <div class="a_group">
-                                    <a href="" class="a_tag" ><span>대학별 고사</span></a>
-                                    <a href="" class="a_tag" ><span>목표대학 설정</span></a>
+                                    <a href="" class="a_tag" target="_blank"><span>대학별 고사</span></a>
+                                    <a href="" class="a_tag" target="_blank"><span>목표대학 설정</span></a>
                                 </div>
                             </div>
                         </li>
@@ -329,12 +329,12 @@
                         <li>
                             <div class="uni_info">
                                 <div class="tit">
-                                    <a href="http://www.kaya.ac.kr/Home/Main.mbz" class="name">
-                                        가야대학교</a>
+                                    <a href="https://www.khu.ac.kr/kor/main/index.do" class="name" target="_blank">
+                                        경희대학교</a>
                                 </div>
                                 <div class="a_group">
-                                    <a href="" class="a_tag" ><span>대학별 고사</span></a>
-                                    <a href="" class="a_tag" ><span>목표대학 설정</span></a>
+                                    <a href="" class="a_tag" target="_blank"><span>대학별 고사</span></a>
+                                    <a href="" class="a_tag" target="_blank"><span>목표대학 설정</span></a>
                                 </div>
                             </div>
                         </li>
@@ -342,12 +342,12 @@
                         <li>
                             <div class="uni_info">
                                 <div class="tit">
-                                    <a href="http://www.kaya.ac.kr/Home/Main.mbz" class="name">
-                                        가야대학교</a>
+                                    <a href="https://www.hanyang.ac.kr/" class="name" target="_blank">
+                                        한양대학교</a>
                                 </div>
                                 <div class="a_group">
-                                    <a href="" class="a_tag" ><span>대학별 고사</span></a>
-                                    <a href="" class="a_tag" ><span>목표대학 설정</span></a>
+                                    <a href="" class="a_tag" target="_blank"><span>대학별 고사</span></a>
+                                    <a href="" class="a_tag" target="_blank"><span>목표대학 설정</span></a>
                                 </div>
                             </div>
                         </li>
@@ -355,12 +355,12 @@
                         <li>
                             <div class="uni_info">
                                 <div class="tit">
-                                    <a href="http://www.kaya.ac.kr/Home/Main.mbz" class="name">
-                                        가야대학교</a>
+                                    <a href="https://www.cau.ac.kr/index.do" class="name" target="_blank">
+                                        중앙대학교</a>
                                 </div>
                                 <div class="a_group">
-                                    <a href="" class="a_tag" ><span>대학별 고사</span></a>
-                                    <a href="" class="a_tag" ><span>목표대학 설정</span></a>
+                                    <a href="" class="a_tag" target="_blank"><span>대학별 고사</span></a>
+                                    <a href="" class="a_tag" target="_blank"><span>목표대학 설정</span></a>
                                 </div>
                             </div>
                         </li>

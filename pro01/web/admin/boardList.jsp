@@ -179,7 +179,7 @@
 
     // 해당 회원의 정보를 db에서 가져옴
     try {
-        String sql = "select * from member where id != 'admin'";
+        String sql = "select * from member where id != 'admin' order by regdate desc";
         pstmt = conn.prepareStatement(sql);
         rs = pstmt.executeQuery();
         while(rs.next()){
@@ -246,7 +246,7 @@
                 <script>
                     $(document).ready( function () {
                         $('#myTable').DataTable({
-                            order: [[0, 'desc']], // 0번째 컬럼을 기준으로 내림차순 정렬
+                            order: [[3, 'desc']], // 0번째 컬럼을 기준으로 내림차순 정렬
                             info: false,
                             dom: 'lt<f>p',
                             language: {

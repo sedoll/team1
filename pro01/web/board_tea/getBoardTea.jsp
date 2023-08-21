@@ -14,7 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>학생 게시판 상세</title>
+    <title>선생님 게시판 상세</title>
     <%@ include file="../head.jsp" %>
 
     <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="../css/ft.css">
     <style>
         /* 본문 영역 스타일 */
-        .contents { clear:both; min-height: 150vh; background-image: url("../img/login.jpg");
+        .contents { clear:both; min-height: 180vh; background-image: url("../img/login.jpg");
             background-repeat: no-repeat; background-position: center -250px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
@@ -45,42 +45,200 @@
         .page::after { content:""; display:block; width: 100%; clear:both; }
 
         .page_wrap { clear:both; width: 1200px; height: auto; margin:0 auto; }
-        .page_tit { font-size:48px; text-align: center; padding-top:0.7em; color:#fff;
+        .page_tit { font-size:48px; text-align: center;  color:#fff;
             padding-bottom: 1.3em; }
 
         .breadcrumb { clear:both;
             width:1200px; margin: 0 auto; text-align: right; color:#fff;
             padding-top: 28px; padding-bottom: 28px; }
         .breadcrumb a { color:#fff; }
-        .tb1 {width: 1200px; font-size: 17px; margin-bottom: 50px;}
-        .tb1 th {line-height: 32px; padding-top:8px; padding-bottom:8px; font-size: 21px;
-            border-bottom: 1px solid #333; border-top: 1px solid #333; box-sizing: border-box; text-align: center;}
-        .tb1 td {line-height: 32px; padding-top:8px; padding-bottom:8px;
-            border-bottom: 1px solid #333; border-top: 1px solid #333; box-sizing: border-box; text-align: left;}
 
-        .tb1 .item1 { width: 20%;}
-        .tb1 .item2 {width: 55%;}
-        .tb1 .item3 {width: 10%;}
-        .tb1 .item4 {width: 15%;}
+        .tb1 {
+            width: 1200px;
+            font-size: 17px;
+            margin-bottom: 50px;
+            border-collapse: collapse; /* 테이블 간격 없애기 */
+        }
 
-        .inbtn { display:inline-block;  border-radius:10px;
-            width:30px; margin-right: 10px; margin-left: 10px; text-align: center;  background-color: #333; color:#fff; font-size: 15px; cursor: pointer; }
+        .tb1 thead th {
+            line-height: 32px;
+            padding: 12px 15px; /
+            /*border: 1px solid #f5f5f5; !*/
+        box-sizing: border-box;
+            background-color: #eeeeee; /* 배경색 조정 */
+            font-size: 22px;
+            font-weight: 600;
+            border-radius: 10px;
+        }
+
+        .tb1 thead td {
+            font-size: 16px;
+            text-align: right;
+            line-height: 40px;
+            border-bottom: #7e7e7e 1px solid;
+
+        }
+        .tb1 thead td:nth-child(1) {
+            width: 6%;
+            text-align: center;
+        }.tb1 thead td:nth-child(2) {
+             text-align: left;
+             width: 14%;
+         }
+        .tb1 thead td:nth-child(3) {
+            font-weight: 600;
+            width: 62%;
+        }
+        .tb1 thead td:nth-child(4) {
+            width: 10%;
+        }
+        .tb1 thead td:nth-child(5) {
+            width: 8%;
+
+        }
+        /*글 내용*/
+        .tb1 tbody tr td {
+            padding-left: 10px;
+            padding-top: 40px;
+            font-size: 18px;
+            text-align: left;
+
+
+        }
+        .content > div {
+            min-height: 400px;
+            border-bottom: 1px solid #7e7e7e;
+        }
+
+
+        .title {
+            text-align: left;
+            font-weight: bold;
+        }
+
+
+
+        .tb2{
+            width: 1200px;
+        }
+
+        .tb2 .item1 { width: 10%; }
+        .tb2 .item2 { width: 68%;}
+        .tb2 .item3 { width: 10%; }
+        .tb2 .item4 { width: 12%;
+        }
+        .tb2 td {
+            border-bottom: 1px solid #7e7e7e;
+            vertical-align: middle;
+            height: 60px;
+        }
+
+        .tb2 thead tr th{
+            text-align: center;
+        }
+        .tb2 tbody tr td:first-child{
+            text-align: center;
+            font-weight: bold;
+
+        }
+        .tb2 tbody tr td:nth-child(2){
+            word-break: break-word;
+
+        }
+        .tb2 tbody tr td:nth-child(3){
+            text-align: center;
+        }
+
+        .inbtn, .delete_btn {
+            display: inline-block;
+            border-radius: 5px;
+            width: 50px;
+            line-height: 28px;
+            text-align: center;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* 마우스 오버 효과 */
+        }
+
+        .inbtn {
+            background-color: #333;
+            color: #fff;
+        }
 
         .delete_btn {
-            background-color: red; color:#fff;
+            background-color: red;
+            color: #fff;
         }
 
-        .inbtn:hover {
-            background-color: #666666;
+        .inbtn:hover, .delete_btn:hover {
+            background-color: #555;
         }
 
-        .frm{margin-top: 50px;}
-        .frm tr > *{margin-right: 10px;}
-        .btn_group {margin-top: 50px;}
-        #ans_btn {float: right; border-radius:10px;
-            width:60px; padding: 10px;}
-        p {display: inline-block;}
-        textarea {resize: none;}
+        .frm {
+            margin-top: 50px;
+        }
+
+        /*.frm tr > * {*/
+        /*    margin-right: 10px;*/
+        /*}*/
+
+        .btn_group {
+            margin-top: 50px;
+        }
+
+        #ans_btn {
+
+            border-radius: 5px;
+            width: 80px; /* 버튼 크기  */
+            padding: 7px 15px;
+            text-align: center;
+        }
+
+
+
+        .tb3{
+            width: 1200px;
+            height: 140px;
+            margin-bottom: 50px;
+            background-color: #eeeeee;
+            border-radius: 10px;
+        }
+
+        .tb3 th {
+            line-height: 100px;
+
+            text-align: center;
+            vertical-align: middle;
+
+        }
+        .tb3 th:first-child{
+            width: 15%;
+            font-weight: bold;
+            font-size: 18px;
+
+        }
+        .tb3 th:nth-child(2){
+            width: 70%;
+        }
+        .tb3 th:last-child{
+            width: 15%;
+
+        }
+        textarea {
+            resize: none;
+            padding: 10px;
+            height: 80px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            vertical-align: middle;
+        }
+        #nologin_comment {
+            width: 1200px;
+            text-align: center;
+            padding-top: 60px;
+            position: absolute;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -144,7 +302,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board_tea/boardTeaList.jsp">학생게시판</a> &gt; <a href="/board_tea/getBoardTea.jsp?bno=<%=bno%>">게시글</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="/board_tea/boardTeaList.jsp">선생님 게시판</a> &gt; <a href="/board_tea/getBoardTea.jsp?bno=<%=bno%>">게시글</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
@@ -158,41 +316,43 @@
                         <th colspan="5"><%=boardList.get(0).getTitle()%></th>
                     </tr>
                     <tr>
-                        <th>
+                        <td>
                             <% if (sid != null && sid.equals(id2)) { %>
                             <a href="/board_tea/updateBoardTea.jsp?bno=<%=bno%>&lev=0" class="inbtn">수정</a>
                             <% } %>
-                        </th>
-                        <th>
+                        </td>
+                        <td>
                             <% if (sid != null &&( sid.equals("admin") || sid.equals(id2))) { %>
                             <a href="/board_tea/deleteBoardTeapro.jsp?bno=<%=bno%>&lev=0" class="inbtn delete_btn" >삭제</a>
                             <% } %>
-                        </th>
-                        <th><%=boardList.get(0).getAuthor()%></th>
-                        <th><%
+                        </td>
+                        <td><%=boardList.get(0).getAuthor()%></td>
+                        <td><%
                             d = ymd.parse(boardList.get(0).getResdate());  //날짜데이터로 변경
                             date = ymd.format(d);
                         %>
                             <%=date %>
-                        </th>
-                        <th>조회수 <%=boardList.get(0).getCnt()%></th>
+                        </td>
+                        <td>조회수 <%=boardList.get(0).getCnt()%></td>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
                         <td colspan="5" class="content">
-                            <%=boardList.get(0).getContent()%>
+                            <div>
+                                <%=boardList.get(0).getContent()%>
+                            </div>
                         </td>
                     </tr>
                     </tbody>
                 </table>
-                <table class="tb1" id="myTable">
+                <table class="tb2" id="myTable">
                     <thead>
                     <tr>
-                        <th class="item1"></th>
+                        <th class="item1">작성자</th>
                         <th class="item2">댓글</th>
-                        <th class="item3">작성자</th>
-                        <th class="item4">작성일</th>
+                        <th class="item3">작성일</th>
+                        <th class="item4"></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -200,19 +360,21 @@
                         for(int i=1; i<boardList.size(); i++) {
                             d = ymd.parse(boardList.get(i).getResdate());  //날짜데이터로 변경
                             date = ymd.format(d);     //형식을 포함한 문자열로 변경
+                            String author = boardList.get(i).getAuthor();
                     %>
                     <tr>
-                        <td class="item1">
-                            <% if (sid != null && sid.equals(id2)) { %>
+                        <td class="item1"><%=author%></td>
+                        <td class="item2"><%=boardList.get(i).getContent() %></td>
+                        <td class="item3"><%=date %></td>
+                        <td class="item4">
+                            <% if (sid != null && sid.equals(author)) { %>
                             <a href="/board_tea/updateAnsTea.jsp?bno=<%=boardList.get(i).getBno()%>&lev=1" class="inbtn">수정</a>
                             <% } %>
                             <% if(sid!=null && (sid.equals(boardList.get(i).getAuthor()) || sid.equals("admin")) && boardList.get(i).getLev() != 0) { %>
                             <a href="/board_tea/deleteBoardTeapro.jsp?bno=<%=boardList.get(i).getBno()%>&lev=1" class="inbtn delete_btn"> 삭제 </a>
                             <% } %>
                         </td>
-                        <td class="item2"><%=boardList.get(i).getContent() %></td>
-                        <td class="item3"><%=boardList.get(i).getAuthor()%></td>
-                        <td class="item4"><%=date %></td>
+
                     </tr>
                     <%
                         }
@@ -228,21 +390,33 @@
 
                             // 3번째 컬럼을 기준으로 내림차순 정렬
                             order: [[3, 'asc']],
+                            pageLength : 5,
+                            searching: false, //검색 제거
+                            lengthChange: false, // show entries 제거
+                            info: false,
+
+                            language: {
+                                emptyTable: '작성된 댓글이 없습니다.'
+                            }
                         });
+                        $('#myTable').css({
+                            'border':'none',
+                        });
+
                     } );
                 </script>
                 <form action="addTeaAnspro.jsp" id="login_frm" class="frm">
-                    <table class="tb1">
+                    <table class="tb3">
                         <tbody>
                         <tr>
+                            <% if (sid != null) { %>
                             <th><%=sid%></th>
                             <th><textarea name="content" id="content" cols="100" rows="5" placeholder="댓글 입력" required ></textarea></th>
-                            <% if (sid != null) { %>
                             <th><input type="submit" value="글쓰기" class="inbtn" id="ans_btn"></th>
                             <input type="hidden" name="bno" value="<%=bno%>" readonly>
                             <input type="hidden" name="id" value="<%=sid%>" readonly>
                             <% } else {%>
-                            <p>댓글을 작성하려면 로그인하세요</p>
+                            <p id="nologin_comment">댓글을 작성하려면 로그인하세요</p>
                             <% } %>
                         </tr>
                         </tbody>

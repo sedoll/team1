@@ -96,7 +96,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board/boardList.jsp">자유게시판</a>
+            <p><a href="/">HOME</a> &gt; <a href="/board_act/boardList.jsp">대외 활동</a>
                 &gt; <a href="/board/addBoard.jsp">게시글 작성</a></p>
         </div>
         <section class="page" id="page1">

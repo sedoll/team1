@@ -127,7 +127,7 @@ create TABLE notice(
 	author VARCHAR(16), -- 작성자
 	resdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP(), -- 작성일
 	cnt INT DEFAULT 0 -- 조회수
-)
+);
 
 INSERT INTO notice(title, content, author) VALUES('공지사항 제목', '공지사항 내용', 'admin');
 

@@ -277,7 +277,7 @@
           <ul>
               <li id="selectedmenu"><a href="help.jsp">공지사항</a></li>
               <li><a href="helpFAQ.jsp">FAQ</a></li>
-              <li><a href="helpQuestion.jsp">문의하기</a></li>
+              <%-- <li><a href="helpQuestion.jsp">문의하기</a></li> --%>
           </ul>
         </div>
           <div class="helpcontent">

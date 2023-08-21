@@ -125,8 +125,7 @@
             width: 8%;
         }
         .tb1 .item2 {
-            width: 60%;
-
+            width: 50%;
             text-align: left;
         }
         .tb1 .item3 {
@@ -212,7 +211,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board/baordList.jsp">자유게시판</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="/board/boardList.jsp">자유게시판</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">

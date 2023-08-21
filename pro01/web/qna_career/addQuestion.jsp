@@ -32,7 +32,7 @@
         .page::after { content:""; display:block; width: 100%; clear:both; }
 
         .page_wrap { clear:both; width: 1200px; height: auto; margin:0 auto; }
-        .page_tit { font-size:48px; text-align: center; padding-top:0.7em; color:#fff;
+        .page_tit { font-size:48px; text-align: center;  color:#fff;
             padding-bottom: 1.3em; }
 
         .breadcrumb { clear:both;
@@ -48,16 +48,43 @@
 
         .tb1 td:last-child { line-height: 48px; padding-top:24px; padding-bottom:24px; }
 
-        .indata { display:inline-block; width: 400px; height: 32px; line-height: 32px;
-            text-indent:14px; font-size:14px; }
-        .inbtn { display:block;  border-radius:100px;
-            min-width:140px; padding-left: 24px; padding-right: 24px; text-align: center;
-            line-height: 48px; background-color: #333; color:#fff; font-size: 18px; cursor: pointer; }
+
+        .inbtn { display:block;
+            border-radius:10px;
+            min-width:120px;
+            padding-left: 24px;
+            padding-right: 24px;
+            text-align: center;
+            line-height: 38px;
+            background-color: #333;
+            color:#fff;
+            font-size: 18px;
+            cursor: pointer; }
         .inbtn:first-child { float:left; }
         .inbtn:last-child { float:right; }
 
         .inbtn:hover {
             background-color: #666666;
+        }
+        .indata {
+            display:inline-block;
+            width: 590px; /* 조정된 너비 */
+            height: 32px;
+            line-height: 32px;
+            text-indent:10px;
+            font-size:16px;
+            border: 1px solid #ccc; /* 테두리 추가 */
+            border-radius: 5px; /* 둥근 테두리 */
+            padding: 5px 15px; /* 패딩 추가 */
+        }
+
+        textarea {
+            resize: none; /* 크기 조절 기능 제거 */
+            width: 600px; /* 조정된 너비 */
+            padding: 10px; /* 패딩 추가 */
+            border: 1px solid #ccc; /* 테두리 추가 */
+            border-radius: 5px; /* 둥근 테두리 */
+            font-size:16px; /* 폰트 크기 조절 */
         }
 
     </style>
@@ -79,17 +106,15 @@
                     <table class="tb1">
                         <tbody>
                         <tr>
-                            <th><label for="title">질문 제목</label></th>
                             <td><input type="text" name="title" id="title" class="indata" placeholder="제목 입력" autofocus required></td>
                         </tr>
                         <tr>
-                            <th><label for="content">질문 내용</label></th>
                             <td><textarea name="content" id="content" cols="50" rows="15" placeholder="내용 입력" required></textarea></td>
                         </tr>
                         <tr>
                             <td colspan="2">
                                 <input type="submit" value="글쓰기" class="inbtn">
-                                <input type="reset" value="내용 리셋" class="inbtn">
+                                <input type="reset" value="취소" class="inbtn" onclick="window.history.back();">
                             </td>
                         </tr>
                         </tbody>

@@ -93,7 +93,6 @@
 <%
     Board q = new Board();
     int bno = Integer.parseInt(request.getParameter("bno"));
-    int lev = Integer.parseInt(request.getParameter("lev"));
     DBC con = new MariaDBCon();
     Connection conn = null;
     PreparedStatement pstmt = null;
@@ -134,8 +133,8 @@
     <div class="contents" id="contents">
         <div class="breadcrumb">
             <p>
-                <a href="/">HOME</a> &gt; <a href="/board_stu/boardStuList.jsp">학생 게시판</a> &gt; <a href="/board_stu/getBoardStu.jsp">글 상세</a>
-                &gt; <a href="/board_stu/updateBoardStu.jsp">게시글 수정</a>
+                <a href="/">HOME</a> &gt; <a href="/board_stu/boardStuList.jsp">학생 게시판</a> &gt; <a href="/board_stu/getBoardStu.jsp?bno=<%=bno%>">글 상세</a>
+                &gt; <a href="/board_stu/updateBoardStu.jsp?bno=<%=bno%>">게시글 수정</a>
             </p>
         </div>
         <section class="page" id="page1">
@@ -148,7 +147,7 @@
 
                                     <td><input type="text" name="title" id="title" class="indata" value="<%=q.getTitle()%>" autofocus required></td>
                                     <input type="hidden" name="bno" value="<%=bno%>" readonly>
-                                    <input type="hidden" name="lev" value="<%=lev%>" readonly>
+                                    <input type="hidden" name="lev" value="0" readonly>
                                 </tr>
 
                                 <tr>

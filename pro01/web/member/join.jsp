@@ -535,7 +535,7 @@
                                 받습니다.
                             </div>
 
-                            <div class="btn_fr"><input type="checkbox" id="ck_item1" name="ck_item1"> <label
+                            <div class="btn_fr"><input type="checkbox" id="ck_item1" name="ck_item1" required> <label
                                     for="ck_item1">약관의 동의</label>
                             </div>
                         </div>
@@ -548,9 +548,47 @@
 
 
                     </form>
-
                 </div>
-                <script src="/js/join.js"></script>
+                <script>
+                    function inform(frm) {
+                        // var ck_item = frm.getElementById("ck_item").value;
+                        var ck_item = frm.ck_item;
+                        console.log(ck_item);
+                        //var ck_item = document.getElementById("ck_item");
+                        if (ck_item.value != "yes") {
+                            alert("아이디 중복 검사를 진행하시기 바랍니다.");
+                            ck_item.focus();
+                            return false;
+                        }
+                        var pw = frm.pw.value;
+                        var pw2 = frm.pw2.value;
+
+                        // 비밀번호 특수문자 제한
+                        var regex = /^[a-zA-Z0-9]*$/; // 영문 대소문자와 숫자만 허용하는 정규표현식
+                        if (!regex.test(pw)) {
+                            alert("비밀번호는 영문 대소문자와 숫자만 사용할 수 있습니다.");
+                            return false;
+                        }
+
+                        if (pw != pw2) {
+                            alert("비밀번호와 비밀번호 확인이 서로 다릅니다.");
+                            return false;
+                        }
+                    }
+
+                    function idcheck(){
+                        var child;
+                        var id = document.getElementById("id");
+                        if(id.value!="") {
+                            child = window.open("", "child", "width=600, height=400");
+                            child.location.href = "idcheck.jsp?id="+id.value;
+                        } else {
+                            alert("아이디 입력란에 아이디를 입력하고, 진행하시기 바랍니다.");
+                            id.focus();
+                            return false;
+                        }
+                    }
+                </script>
             </div>
         </section>
     </div>
@@ -559,19 +597,5 @@
     <%@ include file="../footer.jsp" %>
 </footer>
 </div>
-<script>
-    function idcheck(){
-        var child;
-        var id = document.getElementById("id");
-        if(id.value!="") {
-            child = window.open("", "child", "width=600, height=400");
-            child.location.href = "idcheck.jsp?id="+id.value;
-        } else {
-            alert("아이디 입력란에 아이디를 입력하고, 진행하시기 바랍니다.");
-            id.focus();
-            return false;
-        }
-    }
-</script>
 </body>
 </html>

@@ -125,8 +125,7 @@
             width: 8%;
         }
         .tb1 .item2 {
-            width: 60%;
-
+            width: 50%;
             text-align: left;
         }
         .tb1 .item3 {
@@ -212,7 +211,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/qna/qnaList.jsp">문제 QNA</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="qnaList.jsp">문제 QNA</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
@@ -239,7 +238,7 @@
                         <td class="item1"><%=tot-- %></td>
                         <td class="item2"><a href="getQna.jsp?qno=<%=arr.getPar() %>"><%=arr.getTitle() %></a></td>
                         <td class="item3"><%=arr.getAuthor()%></td>
-                        <td class="item4"><%=date %></td>
+                        <td class="item3"><%=date %></td>
                         <td class="item1"><%=arr.getCnt() %></td>
                     </tr>
                     <%

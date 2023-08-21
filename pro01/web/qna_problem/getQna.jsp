@@ -301,7 +301,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="qnaList.jsp">문제 QNA</a> &gt; <a href="qnaList.jsp">문제 QNA 상세</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="qnaList.jsp">문제 QNA</a> &gt; <a href="getQna.jsp?qno=<%=qno%>">질문 상세</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
@@ -413,7 +413,7 @@
                             <input type="hidden" name="qno" value="<%=qno%>" readonly>
                             <input type="hidden" name="id" value="<%=sid%>" readonly>
                             <% }  else {%>
-                            <p id="nologin_comment">댓글을 작성하려면 로그인하세요</p>
+                            <p id="nologin_comment">작성자와 선생님만 댓글을 쓸 수 있습니다.</p>
                             <% } %>
                         </tr>
                         </tbody>

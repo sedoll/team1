@@ -1,4 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+<%@ page import="java.sql.*" %>
+<%@ page import="com.chunjae.db.*" %>
+<%@ page import="com.chunjae.vo.*" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="com.chunjae.dto.Board" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,6 +72,63 @@
         .ico.item1 {background-position: -70px -60px;} /*네이버 블로그 아이콘*/
         .ico.item2 {background-position: -140px -120px;} /*인스타 그램 아이콘*/
 
+
+        .board_tit {font-size: 38px; text-align: center;
+            padding-top: 50px;
+            padding-top: 0.5em;
+            margin-bottom: 20px}
+
+        .latest_board{
+            width:1000px;
+            margin: 0 auto;
+        }
+        .leftcontent {
+            width: 500px;
+            height: 700px;
+            float: left;
+
+        }
+        .rightcontent {
+            width: 500px;
+            height: 700px;
+            display: inline-block;
+
+        }
+        .rightcontent table{
+            float: right;
+        }
+        .tb1 {
+            font-size: 16px;
+            width: 480px;
+        }
+        .tb1 th {
+            font-weight: bold;
+            background-color: #dae4f3;
+            line-height: 40px;
+            border-right: 1px solid white;
+
+        }
+        .tb1 td {
+            line-height: 34px;
+            border-bottom: 1px solid #d2d2d2;
+        }
+        .tb1 .item1 {
+            width: 70%;
+            text-align: left;
+            padding-left: 20px;
+
+        }
+        .tb1 .item2 {
+            width: 15%;
+            text-align: center;
+        }
+        .tb1 .item3 {
+            width: 15%;
+            text-align: center;
+        }
+
+
+
     </style>
 </head>
 <body>
@@ -96,6 +161,140 @@
     </figure>
     <script src="./js/rotation.js"></script>
 
+    <%
+        request.setCharacterEncoding("utf8");
+        response.setContentType("text/html;charset=UTF-8");
+        response.setCharacterEncoding("utf8");
+
+        List<Board> boardList = new ArrayList<>();
+
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+
+        DBC con = new MariaDBCon();
+        conn = con.connect();
+        if(conn != null){
+            System.out.println("DB 연결 성공");
+        }
+
+        // 해당 회원의 정보를 db에서 가져옴
+        try {
+            String sql = "select * from board where lev=0 order by par desc limit 10";
+            pstmt = conn.prepareStatement(sql);
+            rs = pstmt.executeQuery();
+            while(rs.next()){
+                Board board = new Board();
+                board.setPar(rs.getInt("par"));
+                board.setCnt(rs.getInt("cnt"));
+                board.setTitle(rs.getString("title"));
+                board.setAuthor(rs.getString("author"));
+                board.setResdate(rs.getString("resdate"));
+                boardList.add(board);
+            }
+        } catch(SQLException e) {
+            System.out.println("SQL 구문이 처리되지 못했습니다.");
+        } finally {
+            con.close(rs, pstmt, conn);
+        }
+    %>
+        <div class="page_wrap">
+            <div class="latest_board">
+                <div class="leftcontent">
+                    <h2 class="board_tit">자유게시판</h2>
+                    <table class="tb1" id="myTable">
+                        <thead>
+                        <tr>
+                            <th class="item1" style="text-align: center">제목</th>
+                            <th class="item2" style="text-align: center">작성자</th>
+                            <th class="item3" style="text-align: center">작성일</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <%
+                            int tot = boardList.size();
+                            SimpleDateFormat ymd = new SimpleDateFormat("yy-MM-dd");
+                            int count = 0;
+                            for(Board arr:boardList) {
+                                if(count++ >= 15) break;
+                                Date d = ymd.parse(arr.getResdate());  //날짜데이터로 변경
+                                String date = ymd.format(d);    //형식을 포함한 문자열로 변경
+                        %>
+                        <tr>
+                            <td class="item1"><a href="/board/getBoard.jsp?bno=<%=arr.getPar() %>"><%=arr.getTitle() %></a></td>
+                            <td class="item2"><%=arr.getAuthor()%></td>
+                            <td class="item3"><%=date %></td>
+                        </tr>
+                        <%
+                            }
+                        %>
+                        </tbody>
+                    </table>
+                </div>
+
+                <%
+                    List<Qna> qnaList = new ArrayList<>();
+
+                    conn = con.connect();
+                    if(conn != null){
+                        System.out.println("DB 연결 성공");
+                    }
+
+                    // 해당 회원의 정보를 db에서 가져옴
+                    try {
+                        String sql = "select * from qna_problem where lev=0 order by par desc limit 10";
+                        pstmt = conn.prepareStatement(sql);
+                        rs = pstmt.executeQuery();
+                        while(rs.next()){
+                            Qna q = new Qna();
+                            q.setPar(rs.getInt("par"));
+                            q.setTitle(rs.getString("title"));
+                            q.setAuthor(rs.getString("author"));
+                            q.setResdate(rs.getString("resdate"));
+                            qnaList.add(q);
+                        }
+                    } catch(SQLException e) {
+                        System.out.println("SQL 구문이 처리되지 못했습니다.");
+                    } finally {
+                        con.close(rs, pstmt, conn);
+                    }
+                %>
+
+                <div class="rightcontent">
+                    <h2 class="board_tit">문제 QNA</h2>
+                    <table class="tb1">
+                        <thead>
+                        <tr>
+                            <th class="item1" style="text-align: center">제목</th>
+                            <th class="item2" style="text-align: center">작성자</th>
+                            <th class="item3" style="text-align: center">작성일</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <%
+
+                            count = 0;
+                            for(Qna arr:qnaList) {
+                                if(count++ >= 15) break;
+                                Date d = ymd.parse(arr.getResdate());  //날짜데이터로 변경
+                                String date = ymd.format(d);    //형식을 포함한 문자열로 변경
+                        %>
+                        <tr>
+                            <td class="item1"><a href="/qna_problem/getQna.jsp?qno=<%=arr.getPar() %>"><%=arr.getTitle() %></a></td>
+                            <td class="item2"><%=arr.getAuthor()%></td>
+                            <td class="item3"><%=date %></td>
+                        </tr>
+                        <%
+                            }
+                        %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+    <%--
     <section class="page" id="page1">
         <div class="page_wrap">
             <h2 class="page_tit">페이지 제목1</h2>
@@ -207,11 +406,12 @@
         </div>
     </section>
     <script src="./js/slidebox.js"></script>
+    --%>
 </div>
 
 <footer class="ft" id="ft">
     <%@include file="footer.jsp"%>
 </footer>
-<a href="#" class="totop">위로</a>
+<a href="#" class="totop">위</a>
 </body>
 </html>
