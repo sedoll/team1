@@ -158,34 +158,32 @@
             height: 165px;
         }
 
-        #map1 .cnt{
-            font-size: 1.5rem;
-            color: #666;
+        #map1 h3 {
+            margin-top: 1.5rem;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 4.167rem;
         }
-
-        #map1 .tit{
+        #map1 .tit {
             letter-spacing: 2px;
-            font-size: 1.167rem;
-            color: #9fa3a7;
+            font-size: 1.5rem;
+            color: rgb(117, 120, 123);
             font-family: roboto;
             font-weight: 700;
             margin-bottom: 0.833rem;
         }
-
-        #map1 h3{
-            margin-top: 1.5rem;
-            font-size: 2.167rem;
-            font-weight: 500;
-            margin-bottom: 4.167rem;
-        }
-
-        #map1 p{
+        #map1 p {
             display: block;
             margin-block-start: 1em;
             margin-block-end: 1em;
             margin-inline-start: 0px;
             margin-inline-end: 0px;
-
+        }
+        #map1 .page_wrap {
+            clear: both;
+            width: 1000px;
+            height: auto;
+            margin: 0 auto;
         }
 
         .maparea{
