@@ -194,3 +194,6 @@
 ![QnA -진로 상담(본인,선생 제외 접근 시 알림창)](https://github.com/sedoll/team_pro1/assets/65212187/3410142a-bb47-4456-a6b4-b3eaef70f5b1)
 🔹글 상세 보기
 <img width="1058" alt="QnA - 글 상세 보기" src="https://github.com/sedoll/team_pro1/assets/65212187/e4f09cbb-e9f8-4815-a9ba-78e5cdc8cf46">
+
+wbs
+https://docs.google.com/spreadsheets/d/1uggY29M2T0PDeETI_aQ5_6qshI4JadBXmnfXXcA_nOI/edit#gid=1473426865
