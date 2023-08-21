@@ -1,12 +1,16 @@
-<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
-<%@ page import="java.sql.*" %>
-<%@ page import="com.chunjae.db.*" %>
-<%@ page import="com.chunjae.vo.*" %>
+<%@ page import="com.chunjae.vo.Qna" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="java.util.Date" %>
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="com.chunjae.dto.Board" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="com.chunjae.db.DBC" %>
+<%@ page import="com.chunjae.db.MariaDBCon" %>
+<%@ page import="java.sql.SQLException" %>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,8 +42,8 @@
         .page_wrap { clear: both; width: 1200px; height: auto; margin: 0 auto;}
         .page_tit {font-size: 48px; text-align: center; padding-top: 50px; padding-top: 0.5em;}
 
-        #page1 {background-color: #f1f2f1; background-image: url("./img/bg_social_ptn01.png"); background-position: 15vw 75vh;
-            background-repeat: no-repeat; padding-top: 50px;}
+        #page2 {height: 400px; background-color: #f5f9fe; background-position: 15vw 75vh;
+            background-repeat: no-repeat; padding-top: 100px;}
 
         .pic_lst {clear: both; width: 1200px; margin: 150px auto;}
         .pic_lst li {width: 280px; height: 400px; margin-left: 26px; float: left; background-repeat: no-repeat;
@@ -69,10 +73,14 @@
         .card_lst li.item6 .thumb_box {background-image: url("./img/t5.jpg");}
         .card_lst li.item7 .thumb_box {background-image: url("./img/t6.jpg");}
 
+
         .ico.item1 {background-position: -70px -60px;} /*네이버 블로그 아이콘*/
         .ico.item2 {background-position: -140px -120px;} /*인스타 그램 아이콘*/
 
 
+
+
+        /*중간*/
         .board_tit {font-size: 38px; text-align: center;
             padding-top: 50px;
             padding-top: 0.5em;
@@ -129,6 +137,113 @@
 
 
 
+
+/*하단*/
+
+        .flexset {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .boxes {
+            width: 100%;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+
+                > div {
+                    box-shadow: 8px 9px 25px 1px rgba(168, 166, 166, 0.75);
+                    width: 300px;
+                    border-radius: 20px;
+                    overflow: hidden;
+
+                    .top {
+                        height: 200px;
+                        position: relative;
+
+                        .imgBox {
+                            position: absolute;
+                            bottom: 0;
+                            left: 10px;
+                            width: 90px;
+                            height: 90px;
+                        }
+                    }
+
+                    .bottom {
+                        padding: 30px 20px;
+                        display: flex;
+                        flex-direction: column;
+                        background-color: #ffffff;
+
+                    .description {
+                        margin: 10px 0;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+
+                    > button {
+                        margin-top: 10px;
+                        width: 100px;
+                        height: 38px;
+                        border: 1px solid #d6d5d6;
+                        background: #fff;
+                    }
+                }
+
+                    .first {
+                        background-color: #f4eac0;
+                    }
+
+                    .second {
+                        background-color: #e3d6ee;
+                    }
+
+                    .title {
+                        font-size: 30px;
+                        font-weight: bold;
+                        z-index: 1;
+                    }
+
+                    .img {
+                        position: absolute;
+                        height: 100%;
+                    }
+                }
+
+                .last {
+                    background: #cadbef;
+                    line-height: 1.3;
+                    position: relative;
+
+                .right {
+                    text-align: right;
+                    position: absolute;
+                    top: 100px;
+                }
+
+                .friends {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 45%;
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -161,6 +276,9 @@
     </figure>
     <script src="./js/rotation.js"></script>
 
+
+
+
     <%
         request.setCharacterEncoding("utf8");
         response.setContentType("text/html;charset=UTF-8");
@@ -180,7 +298,7 @@
 
         // 해당 회원의 정보를 db에서 가져옴
         try {
-            String sql = "select * from board where lev=0 order by par desc limit 10";
+            String sql = "select * from board where lev=0 order by par desc";
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
             while(rs.next()){
@@ -198,215 +316,160 @@
             con.close(rs, pstmt, conn);
         }
     %>
-        <div class="page_wrap">
-            <div class="latest_board">
-                <div class="leftcontent">
-                    <h2 class="board_tit">자유게시판</h2>
-                    <table class="tb1" id="myTable">
-                        <thead>
-                        <tr>
-                            <th class="item1" style="text-align: center">제목</th>
-                            <th class="item2" style="text-align: center">작성자</th>
-                            <th class="item3" style="text-align: center">작성일</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <%
-                            int tot = boardList.size();
-                            SimpleDateFormat ymd = new SimpleDateFormat("yy-MM-dd");
-                            int count = 0;
-                            for(Board arr:boardList) {
-                                if(count++ >= 15) break;
-                                Date d = ymd.parse(arr.getResdate());  //날짜데이터로 변경
-                                String date = ymd.format(d);    //형식을 포함한 문자열로 변경
-                        %>
-                        <tr>
-                            <td class="item1"><a href="/board/getBoard.jsp?bno=<%=arr.getPar() %>"><%=arr.getTitle() %></a></td>
-                            <td class="item2"><%=arr.getAuthor()%></td>
-                            <td class="item3"><%=date %></td>
-                        </tr>
-                        <%
-                            }
-                        %>
-                        </tbody>
-                    </table>
-                </div>
-
-                <%
-                    List<Qna> qnaList = new ArrayList<>();
-
-                    conn = con.connect();
-                    if(conn != null){
-                        System.out.println("DB 연결 성공");
-                    }
-
-                    // 해당 회원의 정보를 db에서 가져옴
-                    try {
-                        String sql = "select * from qna_problem where lev=0 order by par desc limit 10";
-                        pstmt = conn.prepareStatement(sql);
-                        rs = pstmt.executeQuery();
-                        while(rs.next()){
-                            Qna q = new Qna();
-                            q.setPar(rs.getInt("par"));
-                            q.setTitle(rs.getString("title"));
-                            q.setAuthor(rs.getString("author"));
-                            q.setResdate(rs.getString("resdate"));
-                            qnaList.add(q);
+    <div class="page_wrap">
+        <div class="latest_board">
+            <div class="leftcontent">
+                <h2 class="board_tit">자유게시판</h2>
+                <table class="tb1" id="myTable">
+                    <thead>
+                    <tr>
+                        <th class="item1" style="text-align: center">제목</th>
+                        <th class="item2" style="text-align: center">작성자</th>
+                        <th class="item3" style="text-align: center">작성일</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <%
+                        int tot = boardList.size();
+                        SimpleDateFormat ymd = new SimpleDateFormat("yy-MM-dd");
+                        int count = 0;
+                        for(Board arr:boardList) {
+                            if(count++ >= 15) break;
+                            Date d = ymd.parse(arr.getResdate());  //날짜데이터로 변경
+                            String date = ymd.format(d);    //형식을 포함한 문자열로 변경
+                    %>
+                    <tr>
+                        <td class="item1"><a href="/board/getBoard.jsp?bno=<%=arr.getPar() %>"><%=arr.getTitle() %></a></td>
+                        <td class="item2"><%=arr.getAuthor()%></td>
+                        <td class="item3"><%=date %></td>
+                    </tr>
+                    <%
                         }
-                    } catch(SQLException e) {
-                        System.out.println("SQL 구문이 처리되지 못했습니다.");
-                    } finally {
-                        con.close(rs, pstmt, conn);
+                    %>
+                    </tbody>
+                </table>
+            </div>
+
+            <%
+                List<Qna> qnaList = new ArrayList<>();
+
+                conn = con.connect();
+                if(conn != null){
+                    System.out.println("DB 연결 성공");
+                }
+
+                // 해당 회원의 정보를 db에서 가져옴
+                try {
+                    String sql = "select * from qna_problem where lev=0 order by par desc";
+                    pstmt = conn.prepareStatement(sql);
+                    rs = pstmt.executeQuery();
+                    while(rs.next()){
+                        Qna q = new Qna();
+                        q.setPar(rs.getInt("par"));
+                        q.setTitle(rs.getString("title"));
+                        q.setAuthor(rs.getString("author"));
+                        q.setResdate(rs.getString("resdate"));
+                        qnaList.add(q);
                     }
-                %>
+                } catch(SQLException e) {
+                    System.out.println("SQL 구문이 처리되지 못했습니다.");
+                } finally {
+                    con.close(rs, pstmt, conn);
+                }
+            %>
 
-                <div class="rightcontent">
-                    <h2 class="board_tit">문제 QNA</h2>
-                    <table class="tb1">
-                        <thead>
-                        <tr>
-                            <th class="item1" style="text-align: center">제목</th>
-                            <th class="item2" style="text-align: center">작성자</th>
-                            <th class="item3" style="text-align: center">작성일</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <%
+            <div class="rightcontent">
+                <h2 class="board_tit">문제 QNA</h2>
+                <table class="tb1">
+                    <thead>
+                    <tr>
+                        <th class="item1" style="text-align: center">제목</th>
+                        <th class="item2" style="text-align: center">작성자</th>
+                        <th class="item3" style="text-align: center">작성일</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <%
 
-                            count = 0;
-                            for(Qna arr:qnaList) {
-                                if(count++ >= 15) break;
-                                Date d = ymd.parse(arr.getResdate());  //날짜데이터로 변경
-                                String date = ymd.format(d);    //형식을 포함한 문자열로 변경
-                        %>
-                        <tr>
-                            <td class="item1"><a href="/qna_problem/getQna.jsp?qno=<%=arr.getPar() %>"><%=arr.getTitle() %></a></td>
-                            <td class="item2"><%=arr.getAuthor()%></td>
-                            <td class="item3"><%=date %></td>
-                        </tr>
-                        <%
-                            }
-                        %>
-                        </tbody>
-                    </table>
-                </div>
+                        count = 0;
+                        for(Qna arr:qnaList) {
+                            if(count++ >= 15) break;
+                            Date d = ymd.parse(arr.getResdate());  //날짜데이터로 변경
+                            String date = ymd.format(d);    //형식을 포함한 문자열로 변경
+                    %>
+                    <tr>
+                        <td class="item1"><a href="getQna.jsp?qno=<%=arr.getPar() %>"><%=arr.getTitle() %></a></td>
+                        <td class="item2"><%=arr.getAuthor()%></td>
+                        <td class="item3"><%=date %></td>
+                    </tr>
+                    <%
+                        }
+                    %>
+                    </tbody>
+                </table>
             </div>
         </div>
 
+    </div>
 
-    <%--
-    <section class="page" id="page1">
-        <div class="page_wrap">
-            <h2 class="page_tit">페이지 제목1</h2>
-            <!-- ul.pic_lst>li.item$*4>a>p.pic_com{설명}+h3.pic_tit{제목}+span.pic_arrow -->
-            <ul class="pic_lst">
-                <li class="item1">
-                    <a href="">
-                        <p class="pic_com">설명</p>
-                        <h3 class="pic_tit">제목</h3>
-                        <span class="pic_arrow"></span>
-                    </a>
-                </li>
-                <li class="item2">
-                    <a href="">
-                        <p class="pic_com">설명</p>
-                        <h3 class="pic_tit">제목</h3>
-                        <span class="pic_arrow"></span>
-                    </a>
-                </li>
-                <li class="item3">
-                    <a href="">
-                        <p class="pic_com">설명</p>
-                        <h3 class="pic_tit">제목</h3>
-                        <span class="pic_arrow"></span>
-                    </a>
-                </li>
-                <li class="item4">
-                    <a href="">
-                        <p class="pic_com">설명</p>
-                        <h3 class="pic_tit">제목</h3>
-                        <span class="pic_arrow"></span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
+
+
+
+
     <section class="page" id="page2">
         <div class="page_wrap">
-            <h2 class="page_tit">페이지 제목2</h2>
-            <p class="page_com">페이지 설명</p>
-            <div class="sl-btn-box">
-                <button type="button" class="btn next">&gt;</button>
-                <button type="button" class="btn prev">&lt;</button>
-            </div>
-            <!-- div.slide_box>ul.card_lst>li.item$*7>a>div.thumb_box+p.thumb_tit{썸네일제목$}+(div.ico_box>span.ico_item+span{아이콘$}.thumb_date{2023-07-18}) -->
-            <div class="slide_box">
-                <ul class="card_lst">
-                    <li class="item1">
-                        <h3 class="cate_tit">언론보도</h3>
-                        <ul class="cate_lst">
-                            <li>
-                                <a href="">
-                                    <p class="bd_content">운필력 키우는 한글 글쓰기, 유아학습지로 창의력과 표현력을 기른다.</p>
-                                    <p class="bd_date">2023-07-17</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <p class="bd_content">천재교과서, 스마트해법-밀크T 온·오프라인 결합 상품 더블케어 천재패스 출시</p>
-                                    <p class="bd_date">2023-07-17</p>
-                                </a>
-                            </li>
+            <%--<h2 class="page_tit">페이지 제목2</h2>
+            <p class="page_com">페이지 설명</p>--%>
+
+
+            <div class="boxes">
+                <div>
+                    <div class="top first flexset">
+                        <div class="imgBox">
+                            <img src="./img/main_bottom_1.png" alt="" class="img" />
+                        </div>
+                        <a class="title"> 공지사항 </a>
+                    </div>
+                    <div class="bottom">
+                        <ul class="description">
+                            <li>테스트 중입니다 1</li>
+
                         </ul>
-                    </li>
-                    <li class="item2">
-                        <a href="">
-                            <div class="thumb_box"></div>
-                            <p class="thumb_tit">썸네일제목2</p>
-                            <div class="ico_box"><span class="ico item1"></span><span class="thumb_date">2023-07-18</span></div>
-                        </a>
-                    </li>
-                    <li class="item3">
-                        <a href="">
-                            <div class="thumb_box"></div>
-                            <p class="thumb_tit">썸네일제목3</p>
-                            <div class="ico_box"><span class="ico item1"></span><span class="thumb_date">2023-07-18</span></div>
-                        </a>
-                    </li>
-                    <li class="item4">
-                        <a href="">
-                            <div class="thumb_box"></div>
-                            <p class="thumb_tit">썸네일제목4</p>
-                            <div class="ico_box"><span class="ico item2"></span><span class="thumb_date">2023-07-18</span></div>
-                        </a>
-                    </li>
-                    <li class="item5">
-                        <a href="">
-                            <div class="thumb_box"></div>
-                            <p class="thumb_tit">썸네일제목5</p>
-                            <div class="ico_box"><span class="ico item1"></span><span class="thumb_date">2023-07-18</span></div>
-                        </a>
-                    </li>
-                    <li class="item6">
-                        <a href="">
-                            <div class="thumb_box"></div>
-                            <p class="thumb_tit">썸네일제목6</p>
-                            <div class="ico_box"><span class="ico item2"></span><span class="thumb_date">2023-07-18</span></div>
-                        </a>
-                    </li>
-                    <li class="item7">
-                        <a href="">
-                            <div class="thumb_box"></div>
-                            <p class="thumb_tit">썸네일제목7</p>
-                            <div class="ico_box"><span class="ico item1"></span><span class="thumb_date">2023-07-18</span></div>
-                        </a>
-                    </li>
-                </ul>
+                        <button class="flexset" onclick="">자세히 보기 </button>
+                    </div>
+                </div>
+                <div>
+                    <div class="top second flexset">
+                        <div class="imgBox">
+                            <img src="./img/main_bottom_2.png" alt="" class="img" />
+                        </div>
+                        <a class="title"> 입시뉴스 </a>
+                    </div>
+                    <div class="bottom">
+                        <ul class="description">
+                            <li>테스트 중입니다 1</li>
+
+                        </ul>
+                        <button class="flexset" onclick="location.href=''">자세히 보기 </button>
+                    </div>
+                </div>
+                <div class="last flexset">
+                    <a href="./member/term.jsp" class="title right">
+                        저희의 <br />
+                        친구가 되어주세요!
+                    </a>
+                    <div class="friends flexset">
+                        <img src="./img/main_bottom_3.png" alt=""class="img"  />
+                    </div>
+                </div>
             </div>
+
+
+
+
         </div>
     </section>
     <script src="./js/slidebox.js"></script>
-    --%>
 </div>
 
 <footer class="ft" id="ft">

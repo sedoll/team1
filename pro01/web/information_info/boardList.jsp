@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QNA</title>
+    <title>입시정보</title>
     <%@ include file="../head.jsp" %>
 
     <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
@@ -55,6 +55,8 @@
             width: 100vw;
             height: 100vh;
             position: relative;
+
+
         }
         .page::after {
             content: "";
@@ -64,11 +66,12 @@
         }
 
         .page_wrap {
+            margin-bottom: 50px;
+            padding-bottom: 50px;
             clear: both;
             width: 1200px;
             height: auto;
             margin: 0 auto;
-
         }
         .page_tit {
             font-size: 48px;
@@ -96,7 +99,7 @@
 
         .list_university{
             width: 100%;
-            margin: 10px auto;
+            margin:  50px 10px 10px 10px;
         }
 
         .uni_info{
@@ -197,7 +200,55 @@
 
         }
 
+        .btn_wrap{
+            clear: both;
+            padding-top: 20px;
+            margin-left: 6%;
+        }
 
+        .btn{
+            border:1px solid #bcbcbc;
+            padding: 10px;
+            width: 150px;
+            background-color: white;
+        }
+
+
+        .search_box{
+            padding: 30px 40px;
+            margin-left: 6%;
+            width: 80%;
+            height: 150px;
+            background-color: #f5f5f3;
+            text-align: center;
+
+
+        }
+
+        .search_inp input{
+            border:1px solid #bcbcbc;
+            padding: 10px;
+            width: 60%;
+            background-color: white;
+        }
+
+        .search_inp button{
+            border:1px solid #bcbcbc;
+            padding: 10px;
+            width: 50px;
+            background-color: white;
+        }
+
+        .explain_wrap{
+            margin: 30px 0px 0px ;
+            padding: 30px 0px 0px ;
+            border-top: 1px solid #bcbcbc;
+        }
+
+        .explain_wrap li{
+            margin-bottom: 10px;
+
+        }
 
 
     </style>
@@ -247,12 +298,28 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board/baordList.jsp">입시 정보</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="/information_info/baordList.jsp">입시 정보</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
                 <h2 class="page_tit">입시 정보</h2>
 
+
+                <div class="search_box">
+
+                    <div class="search_inp">
+                        <input type="text" id="srchVal" name="srchVal" placeholder="검색어를 입력하세요." value="">
+                        <button type="button" class="btn_search"><span>검색</span></button>
+                    </div>
+
+                    <div class="explain_wrap">
+                        <ul class="bul bul_dot">
+                            <li>대학명 클릭 시 상세 페이지로 이동합니다.</li>
+                            <li>상세 페이지에서 설치학과, 기출문제, 입시뉴스 등을 확인할 수 있습니다.</li>
+
+                        </ul>
+                    </div>
+                </div>
 
 
                 <!-- board_list -->
@@ -261,12 +328,12 @@
                         <li>
                             <div class="uni_info">
                                 <div class="tit">
-                                    <a href="https://www.snu.ac.kr/" class="name" target="_blank">
-                                        서울대학교</a>
+                                    <a href="http://www.kaya.ac.kr/Home/Main.mbz" class="name">
+                                        가야대학교</a>
                                 </div>
                                 <div class="a_group">
-                                    <a href="" class="a_tag" target="_blank"><span>대학별 고사</span></a>
-                                    <a href="" class="a_tag" target="_blank"><span>목표대학 설정</span></a>
+                                    <a href="" class="a_tag" ><span>대학별 고사</span></a>
+                                    <a href="" class="a_tag" ><span>목표대학 설정</span></a>
                                 </div>
                             </div>
                         </li>
@@ -275,12 +342,12 @@
                         <li>
                             <div class="uni_info">
                                 <div class="tit">
-                                    <a href="https://www.yonsei.ac.kr/sc/" class="name" target="_blank">
-                                        연세대학교</a>
+                                    <a href="https://www.gachon.ac.kr/kor/index.do" class="name">
+                                        가천대학교</a>
                                 </div>
                                 <div class="a_group">
-                                    <a href="" class="a_tag" target="_blank"><span>대학별 고사</span></a>
-                                    <a href="" class="a_tag" target="_blank"><span>목표대학 설정</span></a>
+                                    <a href="" class="a_tag" ><span>대학별 고사</span></a>
+                                    <a href="" class="a_tag" ><span>목표대학 설정</span></a>
                                 </div>
                             </div>
                         </li>
@@ -289,12 +356,12 @@
                         <li>
                             <div class="uni_info">
                                 <div class="tit">
-                                    <a href="https://www.korea.ac.kr/mbshome/mbs/university/index.do" class="name" target="_blank">
-                                        고려대학교</a>
+                                    <a href="https://www.kyonggi.ac.kr/www/index.do" class="name">
+                                        경기대학교</a>
                                 </div>
                                 <div class="a_group">
-                                    <a href="" class="a_tag" target="_blank"><span>대학별 고사</span></a>
-                                    <a href="" class="a_tag" target="_blank"><span>목표대학 설정</span></a>
+                                    <a href="" class="a_tag" ><span>대학별 고사</span></a>
+                                    <a href="" class="a_tag" ><span>목표대학 설정</span></a>
                                 </div>
                             </div>
                         </li>
@@ -303,12 +370,12 @@
                         <li>
                             <div class="uni_info">
                                 <div class="tit">
-                                    <a href="https://www.kaist.ac.kr/kr/" class="name" target="_blank">
-                                        홍익대학교</a>
+                                    <a href="https://web.kangnam.ac.kr/" class="name">
+                                        강남대학교</a>
                                 </div>
                                 <div class="a_group">
-                                    <a href="" class="a_tag" target="_blank"><span>대학별 고사</span></a>
-                                    <a href="" class="a_tag" target="_blank"><span>목표대학 설정</span></a>
+                                    <a href="" class="a_tag" ><span>대학별 고사</span></a>
+                                    <a href="" class="a_tag" ><span>목표대학 설정</span></a>
                                 </div>
                             </div>
                         </li>
@@ -316,12 +383,12 @@
                         <li>
                             <div class="uni_info">
                                 <div class="tit">
-                                    <a href="https://sogang.ac.kr/index.do" class="name" target="_blank">
-                                        서강대학교</a>
+                                    <a href="about:blank" class="name">
+                                        강서대학교</a>
                                 </div>
                                 <div class="a_group">
-                                    <a href="" class="a_tag" target="_blank"><span>대학별 고사</span></a>
-                                    <a href="" class="a_tag" target="_blank"><span>목표대학 설정</span></a>
+                                    <a href="" class="a_tag" ><span>대학별 고사</span></a>
+                                    <a href="" class="a_tag" ><span>목표대학 설정</span></a>
                                 </div>
                             </div>
                         </li>
@@ -329,12 +396,12 @@
                         <li>
                             <div class="uni_info">
                                 <div class="tit">
-                                    <a href="https://www.khu.ac.kr/kor/main/index.do" class="name" target="_blank">
-                                        경희대학교</a>
+                                    <a href="https://wwwk.kangwon.ac.kr/www/index.do" class="name">
+                                        강원대학교</a>
                                 </div>
                                 <div class="a_group">
-                                    <a href="" class="a_tag" target="_blank"><span>대학별 고사</span></a>
-                                    <a href="" class="a_tag" target="_blank"><span>목표대학 설정</span></a>
+                                    <a href="" class="a_tag" ><span>대학별 고사</span></a>
+                                    <a href="" class="a_tag" ><span>목표대학 설정</span></a>
                                 </div>
                             </div>
                         </li>
@@ -342,12 +409,12 @@
                         <li>
                             <div class="uni_info">
                                 <div class="tit">
-                                    <a href="https://www.hanyang.ac.kr/" class="name" target="_blank">
-                                        한양대학교</a>
+                                    <a href="http://www.konkuk.ac.kr/do/Index.do" class="name">
+                                        건국대학교</a>
                                 </div>
                                 <div class="a_group">
-                                    <a href="" class="a_tag" target="_blank"><span>대학별 고사</span></a>
-                                    <a href="" class="a_tag" target="_blank"><span>목표대학 설정</span></a>
+                                    <a href="" class="a_tag" ><span>대학별 고사</span></a>
+                                    <a href="" class="a_tag" ><span>목표대학 설정</span></a>
                                 </div>
                             </div>
                         </li>
@@ -355,21 +422,49 @@
                         <li>
                             <div class="uni_info">
                                 <div class="tit">
-                                    <a href="https://www.cau.ac.kr/index.do" class="name" target="_blank">
-                                        중앙대학교</a>
+                                    <a href="https://ipsi.konyang.ac.kr/ipsi.do" class="name">
+                                        건양대학교</a>
                                 </div>
                                 <div class="a_group">
-                                    <a href="" class="a_tag" target="_blank"><span>대학별 고사</span></a>
-                                    <a href="" class="a_tag" target="_blank"><span>목표대학 설정</span></a>
+                                    <a href="" class="a_tag" ><span>대학별 고사</span></a>
+                                    <a href="" class="a_tag" ><span>목표대학 설정</span></a>
                                 </div>
                             </div>
                         </li>
 
+                        <li>
+                            <div class="uni_info">
+                                <div class="tit">
+                                    <a href="https://www.kyungnam.ac.kr/sites/ko/index.do" class="name">
+                                        경남대학교</a>
+                                </div>
+                                <div class="a_group">
+                                    <a href="" class="a_tag" ><span>대학별 고사</span></a>
+                                    <a href="" class="a_tag" ><span>목표대학 설정</span></a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="uni_info">
+                                <div class="tit">
+                                    <a href="https://kduniv.ac.kr/kor/Main.do" class="name">
+                                        경동대학교</a>
+                                </div>
+                                <div class="a_group">
+                                    <a href="" class="a_tag" ><span>대학별 고사</span></a>
+                                    <a href="" class="a_tag" ><span>목표대학 설정</span></a>
+                                </div>
+                            </div>
+                        </li>
 
                     </ul>
 
                 </div>
 
+                <div class = "btn_wrap">
+                    <button type ="button" class="btn" >더보기</button>
+                </div>
 
 
                 <script>

@@ -12,8 +12,10 @@
  학생들과 교사들이 협력하고 소통하며
  **서로의 경험을 공유하고 함께 성장할 수 있는 플랫폼을 제공**하는 것이   
  저희 팀의 기획의도 입니다.  
+ <br/> <br/>
  
-
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🔹TEENTALK🔹에 대해 자세히 설명해 드릴게요!
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[🙋‍♀️ CLIKE ME (작성 중)🙋](https://drive.google.com/file/d/1UGHN_bC1933wXRF71-rOKsVdkzJZ5uxV/view?usp=drive_link    )
 <br/>
   
 
@@ -22,16 +24,15 @@
   
 
 # 👤 팀원 소개
-**백준철**
-**신승원**
-**오세훈**
-**구예진**  
+백준철
+신승원
+오세훈
+구예진  
 
 <br/>
 
-# 🗓 개발일정  
-2023.08 ~ 
-
+# 🗓 개발일정
+2023.08.01 ~
 
 <br/>
 
@@ -94,19 +95,13 @@
 ![슬라이드6](https://github.com/kuyejin/project1/assets/65212187/be2d5150-d885-412e-b087-6fe975a768f9)
 ![슬라이드7](https://github.com/kuyejin/project1/assets/65212187/2b3693ef-d1d1-4ee6-b94a-5a2a7f320d38)
 ## 4️⃣ 물리적 설계
-![team1 - member](/images/exp/erd.png)  
+![team1 - member](https://github.com/kuyejin/project1/assets/65212187/b05df6bc-a97f-4b1e-8e88-ce469779a794)  
 
 <br/>
 <br/>
 
 # 📐 클래스 다이어그램
-![클래스다이어그램 (1)](/images/exp/classdiagram.png)  
-
-<br/>
-<br/>
-
-# 📐 시퀀스 다이어그램
-![시퀀스 다이어그램](/images/exp/시퀀스%20다이어그램.png)  
+![클래스다이어그램 (1)](https://github.com/kuyejin/project1/assets/65212187/ac5f2d7f-f8dc-4d6c-b0c4-9f3d390cc4ae)  
 
 <br/>
 <br/>
@@ -171,53 +166,31 @@
 
 #  💻 화면 구현
 🔹메인페이지
-![메인페이지](/images/fnl/메인페이지.png)
+<img width="1470" alt="메인페이지" src="https://github.com/kuyejin/project1/assets/65212187/7b1ae488-30db-4a84-b63e-830abf6c2442">
+🔹로그인
+<img width="1470" alt="로그인" src="https://github.com/kuyejin/project1/assets/65212187/72c94da5-2adf-45dc-b9ba-3123324cf92a">
+🔹회원가입(학생 , 교사 선택)
+<img width="1470" alt="회원가입1" src="https://github.com/kuyejin/project1/assets/65212187/9d9c6754-76e1-4ff8-b77a-1691ce54e7f8">
+🔹회원가입
+<img width="815" alt="회원가입2" src="https://github.com/kuyejin/project1/assets/65212187/0c6497db-6d96-4cf5-a61c-bf36c419a02d">
+🔹마이 페이지
+![마이페이지](https://github.com/kuyejin/project1/assets/65212187/a29e57f8-ad40-4fde-afde-e573b5c2f152)
+🔹마이 페이지 - 회원정보수정
+![마이페이지 - 회원정보수정](https://github.com/kuyejin/project1/assets/65212187/5281f72e-1c74-41c1-b2ce-3c39fd8557a3)
+🔹커뮤니티 - 자유게시판_글작성
+<img width="1470" alt="커뮤니티 - 자유게시판 - 글작성" src="https://github.com/kuyejin/project1/assets/65212187/c3377715-fabd-4a74-8e3e-dd3fde748a09">
+🔹커뮤니티 - 자유게시판_자유게시판(로그인O)
+<img width="1470" alt="커뮤니티 - 자유게시판(로그인O)"
+ src="https://github.com/kuyejin/project1/assets/65212187/892ba429-16f1-4436-88b3-30c480994d67">
+ 🔹커뮤니티 - 자유게시판_자유게시판(로그인X)
+<img width="1470" alt="커뮤니티 - 자유게시판(로그인X)" src="https://github.com/kuyejin/project1/assets/65212187/b9ac4492-6ea0-4b40-a316-ca1020817c4d">
 
 
-🔹로그인페이지
-![로그인](/images/fnl/로그인.png)
-
-🔹회원가입페이지1
-![회원가입1](/images/fnl/회원가입1.png)
-
-🔹회원가입페이지2
-![회원가입1](/images/fnl/회원가입2.png)
-
-🔹마이페이지
-![마이페이지](/images/fnl/마이페이지.png)
-
-🔹마이페이지 - 회원정보수정
-![마이페이지](/images/fnl/마이페이지%20-%20회원정보수정.png)
-
-🔹커뮤니티 - 자유게시판 (로그인 O)
-![마이페이지](/images/fnl/커뮤니티%20-%20자유게시판(로그인O).png)
-
-🔹커뮤니티 - 자유게시판 (로그인 X)
-![마이페이지](/images/fnl/커뮤니티%20-%20자유게시판(로그인X).png)
-
-🔹커뮤니티 - 자유게시판 - 글상세(로그인O,본인 글,댓글 수정 버튼)
-![마이페이지](/images/fnl/커뮤니티%20-%20자유게시판%20-%20글상세(로그인O,본인%20글,댓글%20수정%20버튼).png)
-
-🔹커뮤니티 - 자유게시판 - 글작성
-![마이페이지](/images/fnl/커뮤니티%20-%20자유게시판%20-%20글작성.png)
-
-🔹QnA - 글 상세 보기
-![마이페이지](/images/fnl/QnA%20-%20글%20상세%20보기.png)
-
-🔹QnA - 문제 QnA
-![마이페이지](/images/fnl/QnA%20-%20문제%20QnA.png)
-
-🔹QnA - 진로 상담
-![마이페이지](/images/fnl/QnA%20-%20진로상담.png)
-
-🔹QnA - 진로 상담(본인, 선생 제외 접근 시 알림창)<br>
-![마이페이지](/images/fnl/QnA%20-진로%20상담(본인,선생%20제외%20접근%20시%20알림창).png)
-
-🔹고객센터 - FAQ
-![마이페이지](/images/fnl/고객센터%20-%20FAQ.png)
-
-🔹고객센터 - 공지사항
-![마이페이지](/images/fnl/고객센터%20-%20공지사항.png)
-
-🔹관리자페이지
-![관리자페이지](/images/fnl/관리자페이지.PNG)
+ 🔹QnA - 문제 QnA
+<img width="1469" alt="QnA - 문제 QnA" src="https://github.com/sedoll/team_pro1/assets/65212187/b469bce1-16d7-468d-b769-22c404f878e3">
+ 🔹QnA - 진로상담
+![QnA - 진로상담](https://github.com/sedoll/team_pro1/assets/65212187/c7bb6d9d-7e9b-461a-aa82-43b0758df9ff)
+ 🔹QnA - 진로상담(본인,선생 제외 접근 시 알림창)
+![QnA -진로 상담(본인,선생 제외 접근 시 알림창)](https://github.com/sedoll/team_pro1/assets/65212187/3410142a-bb47-4456-a6b4-b3eaef70f5b1)
+🔹글 상세 보기
+<img width="1058" alt="QnA - 글 상세 보기" src="https://github.com/sedoll/team_pro1/assets/65212187/e4f09cbb-e9f8-4815-a9ba-78e5cdc8cf46">

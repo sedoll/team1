@@ -18,6 +18,7 @@ INSERT INTO member(id, pw, NAME, email, tel, job)
 	VALUES('lee', 'lee4885', '이순신', 'lee@edu.com', '010-8765-4321', 2);
 	
 -- board
+-- 본문 더미 자유게시판
 INSERT INTO board(title, content, author) VALUES('본문 제목1', '본문 내용1', 'admin');
 UPDATE board SET par=bno WHERE bno=1;
 
@@ -33,6 +34,11 @@ UPDATE board SET par=bno WHERE bno=4;
 INSERT INTO board(title, content, author) VALUES('본문 제목5', '본문 내용5', 'son');
 UPDATE board SET par=bno WHERE bno=5;
 
+INSERT INTO board(title, content, author) VALUES('본문 제목6', '본문 내용6', 'hong');
+UPDATE board SET par=bno WHERE bno=6; 
+
+
+-- 댓글 더미 
 INSERT INTO board(title, content, author, lev, par) VALUES('댓글', '댓글 내용1', 'son', 1, 1);
 
 INSERT INTO board(title, content, author, lev, par) VALUES('댓글', '댓글 내용2', 'admin', 1, 2);
