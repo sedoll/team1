@@ -75,23 +75,23 @@
 
 #  📊 데이터베이스 설계
 
-## 1. 요구사항 정의
+## 1️⃣ 요구사항 정의
 ![슬라이드1](/요구사항/요구사항정의서1.PNG)
 ![슬라이드2](/요구사항/요구사항정의서2.PNG)
 ![슬라이드3](/요구사항/요구사항정의서3.PNG)
 
-## 2. 요구사항 분석
+## 2️⃣ 요구사항 분석
 ![슬라이드1](https://github.com/kuyejin/project1/assets/65212187/55be3641-041a-4677-910a-fc34cdf579e4)
 ![슬라이드2](https://github.com/kuyejin/project1/assets/65212187/ac3b3d27-b9ef-453f-bf0b-760b0b084832)
 ![슬라이드3](https://github.com/kuyejin/project1/assets/65212187/8f76c49e-68b3-4d2d-b1be-4842e110b9f1)
 
-## 3. 개념적 설계
+## 3️⃣ 개념적 설계
 
 ### 🔹유즈케이스 (USE CASE)
 ![유즈케이스](https://github.com/kuyejin/project1/assets/65212187/06b63eab-69a5-4a46-a687-ee9504319ed1)
 
 
-## 4. 논리적 설계
+## 4️⃣ 논리적 설계
 ![슬라이드1](https://github.com/kuyejin/project1/assets/65212187/35d3ae6b-baaa-493a-9717-7024ec0ac7f5)
 ![슬라이드2](https://github.com/kuyejin/project1/assets/65212187/5b853237-7dc0-4d07-bf1f-0caff9f5dab9)
 ![슬라이드3](https://github.com/kuyejin/project1/assets/65212187/b2d8fc47-08d9-4a4b-8ad0-70d579c0dab7)
@@ -99,7 +99,7 @@
 ![슬라이드5](https://github.com/kuyejin/project1/assets/65212187/904508aa-1339-40e3-ab24-a0102b45b9aa)
 ![슬라이드6](https://github.com/kuyejin/project1/assets/65212187/be2d5150-d885-412e-b087-6fe975a768f9)
 ![슬라이드7](https://github.com/kuyejin/project1/assets/65212187/2b3693ef-d1d1-4ee6-b94a-5a2a7f320d38)
-## 5. 물리적 설계 － ＥＲＤ
+## 5️⃣ 물리적 설계 － ＥＲＤ
 ![erd](https://github.com/kuyejin/project1/assets/65212187/ac23429a-2d06-4bdd-9518-ea4de8f3c31a) 
 
 <br/>
@@ -205,8 +205,8 @@
 <img width="1469" alt="QnA - 문제 QnA" src="https://github.com/sedoll/team_pro1/assets/65212187/b469bce1-16d7-468d-b769-22c404f878e3">
  🔹QnA - 진로상담
 ![QnA - 진로상담](https://github.com/sedoll/team_pro1/assets/65212187/c7bb6d9d-7e9b-461a-aa82-43b0758df9ff)
- 🔹QnA - 진로상담(본인,선생 제외 접근 시 알림창)
-![QnA -진로 상담(본인,선생 제외 접근 시 알림창)](https://github.com/sedoll/team_pro1/assets/65212187/3410142a-bb47-4456-a6b4-b3eaef70f5b1)
+ 🔹QnA - 진로상담(본인,선생 제외 접근 시 알림창)<br>
+![QnA -진로 상담(본인,선생 제외 접근 시 알림창)](https://github.com/sedoll/team_pro1/assets/65212187/3410142a-bb47-4456-a6b4-b3eaef70f5b1)<br>
 🔹글 상세 보기
 <img width="1058" alt="QnA - 글 상세 보기" src="https://github.com/sedoll/team_pro1/assets/65212187/e4f09cbb-e9f8-4815-a9ba-78e5cdc8cf46">
 
