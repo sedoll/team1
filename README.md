@@ -99,6 +99,8 @@
 ![슬라이드5](https://github.com/kuyejin/project1/assets/65212187/904508aa-1339-40e3-ab24-a0102b45b9aa)
 ![슬라이드6](https://github.com/kuyejin/project1/assets/65212187/be2d5150-d885-412e-b087-6fe975a768f9)
 ![슬라이드7](https://github.com/kuyejin/project1/assets/65212187/2b3693ef-d1d1-4ee6-b94a-5a2a7f320d38)
+![슬라이드8](/물리적설계/슬라이드8.png)
+![슬라이드9](/물리적설계/슬라이드9.png)
 ## 5️⃣ 물리적 설계 － ＥＲＤ
 ![erd](https://github.com/kuyejin/project1/assets/65212187/ac23429a-2d06-4bdd-9518-ea4de8f3c31a) 
 
