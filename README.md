@@ -186,8 +186,8 @@
 <img width="1470" alt="로그인" src="https://github.com/kuyejin/project1/assets/65212187/72c94da5-2adf-45dc-b9ba-3123324cf92a">
 🔹회원가입(학생 , 교사 선택)
 <img width="1470" alt="회원가입1" src="https://github.com/kuyejin/project1/assets/65212187/9d9c6754-76e1-4ff8-b77a-1691ce54e7f8">
-🔹회원가입
-<img width="815" alt="회원가입2" src="https://github.com/kuyejin/project1/assets/65212187/0c6497db-6d96-4cf5-a61c-bf36c419a02d">
+🔹회원가입<br>
+<img width="815" alt="회원가입2" src="https://github.com/kuyejin/project1/assets/65212187/0c6497db-6d96-4cf5-a61c-bf36c419a02d"><br>
 🔹마이 페이지
 ![마이페이지](https://github.com/kuyejin/project1/assets/65212187/a29e57f8-ad40-4fde-afde-e573b5c2f152)
 🔹마이 페이지 - 회원정보수정
