@@ -38,7 +38,7 @@
             System.out.println("질문 수정 실패");
 //            response.sendRedirect("updateQuestion.jsp?qno="+qno);
             out.println("<script>alert('질문 수정 실패')</script>");
-            out.println("<script>location.href='qnaList.jsp'</script>"); //location
+            out.println("<script>location.href='/pro01/qna_problem/qnaList.jsp'</script>"); //location
         }
     } catch (SQLException e) {
         System.out.println("질문 수정: sql 에러");

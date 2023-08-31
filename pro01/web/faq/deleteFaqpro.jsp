@@ -23,10 +23,10 @@
         int cnt = pstmt.executeUpdate();
         if(cnt > 0) {
             System.out.println("게시글 삭제 완료");
-            response.sendRedirect("faqList.jsp");
+            response.sendRedirect("/pro01/faq/faqList.jsp");
         } else {
             System.out.println("게시글 삭제 실패");
-            response.sendRedirect("getFaq.jsp");
+            response.sendRedirect("/pro01/faq/getFaq.jsp");
         }
     } catch (SQLException e) {
         System.out.println("게시판 내용 수정: sql 에러");

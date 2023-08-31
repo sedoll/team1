@@ -96,8 +96,8 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board_tea/boardTeaList.jsp">선생님 게시판</a>
-                &gt; <a href="/board_tea/addBoardTea.jsp">게시글 작성</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="./boardTeaList.jsp">선생님 게시판</a>
+                &gt; <a href="./addBoardTea.jsp">게시글 작성</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">

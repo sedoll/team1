@@ -96,8 +96,8 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/file/boardList.jsp">자료실</a>
-                &gt; <a href="/file/fileUpload.jsp">자료 업로드</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="./boardList.jsp">자료실</a>
+                &gt; <a href="./fileUpload.jsp">자료 업로드</a></p>
         </div>
 
         <section class="page" id="page1">

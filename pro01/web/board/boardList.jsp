@@ -211,7 +211,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board/boardList.jsp">자유게시판</a></p>
+            <p><a href="/pro02">HOME</a> &gt; <a href="./boardList.jsp">자유게시판</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
@@ -236,7 +236,7 @@
                     %>
                     <tr>
                         <td class="item1"><%=tot-- %></td>
-                        <td class="item2"><a href="/board/getBoard.jsp?bno=<%=arr.getPar() %>"><%=arr.getTitle() %></a></td>
+                        <td class="item2"><a href="./getBoard.jsp?bno=<%=arr.getPar() %>"><%=arr.getTitle() %></a></td>
                         <td class="item3"><%=arr.getAuthor()%></td>
                         <td class="item3"><%=date %></td>
                         <td class="item1"><%=arr.getCnt() %></td>
@@ -279,7 +279,7 @@
                 </script>
                 <div class="btn_group">
                     <% if (sid != null) { %>
-                    <a href="addBoard.jsp" class="inbtn"> 글 작성 </a>
+                    <a href="./addBoard.jsp" class="inbtn"> 글 작성 </a>
                     <% } else {%>
                     <p>글을 쓰려면 로그인 하세요</p>
                     <% } %>

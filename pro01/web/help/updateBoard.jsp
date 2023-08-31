@@ -134,14 +134,14 @@
     <div class="contents" id="contents">
         <div class="breadcrumb">
             <p>
-                <a href="/">HOME</a> &gt; <a href="/help/help.jsp">공지사항</a> &gt; <a href="/help/getBoard.jsp">게시글 상세</a>
-                &gt; <a href="/help/updateBoard.jsp">게시글 수정</a>
+                <a href="/">HOME</a> &gt; <a href="./help.jsp">공지사항</a> &gt; <a href="./getBoard.jsp">게시글 상세</a>
+                &gt; <a href="./updateBoard.jsp">게시글 수정</a>
             </p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
                 <h2 class="page_tit">게시글 수정</h2>
-                    <form action="updateBoardpro.jsp" id="login_frm" class="frm">
+                    <form action="./updateBoardpro.jsp" id="login_frm" class="frm">
                         <table class="tb1">
                             <tbody>
                                 <tr>

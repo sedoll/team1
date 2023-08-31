@@ -111,8 +111,8 @@
     <div class="contents" id="contents">
         <div class="breadcrumb">
             <p>
-                <a href="/">HOME</a> &gt; <a href="/qna_career/qnaList.jsp">진로상담</a> &gt; <a href="/qna_career/getQna.jsp?qno=<%=qno%>">상담 상세</a>
-                &gt; <a href="/qna_career/updateAns.jsp?qno=<%=qno%>">댓글 수정</a>
+                <a href="/">HOME</a> &gt; <a href="./qnaList.jsp">진로상담</a> &gt; <a href="./getQna.jsp?qno=<%=qno%>">상담 상세</a>
+                &gt; <a href="./updateAns.jsp?qno=<%=qno%>">댓글 수정</a>
             </p>
         </div>
         <section class="page" id="page1">

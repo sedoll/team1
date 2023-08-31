@@ -326,12 +326,12 @@
                     <tr>
                         <td>
                             <% if (sid != null && sid.equals(id2)) { %>
-                            <a href="/qna_career/updateQuestion.jsp?qno=<%=qno%>&lev=0" class="inbtn">수정</a>
+                            <a href="./updateQuestion.jsp?qno=<%=qno%>&lev=0" class="inbtn">수정</a>
                             <% } %>
                         </td>
                         <td>
                             <% if (sid != null &&( sid.equals("admin") || sid.equals(id2))) { %>
-                            <a href="/qna_career/deleteQnapro.jsp?qno=<%=qno%>&lev=0" class="inbtn delete_btn" >삭제</a>
+                            <a href="./deleteQnapro.jsp?qno=<%=qno%>&lev=0" class="inbtn delete_btn" >삭제</a>
                             <% } %>
                         </td>
                         <td><%=qnaList.get(0).getAuthor()%></td>
@@ -376,10 +376,10 @@
                         <td class="item3"><%=date %></td>
                         <td class="item4">
                             <% if (sid != null && sid.equals(author)) { %>
-                            <a href="/qna_career/updateAns.jsp?qno=<%=qnaList.get(i).getQno()%>&lev=1" class="inbtn">수정</a>
+                            <a href="./updateAns.jsp?qno=<%=qnaList.get(i).getQno()%>&lev=1" class="inbtn">수정</a>
                             <% } %>
                             <% if(sid!=null && (sid.equals(qnaList.get(i).getAuthor()) || sid.equals("admin")) && qnaList.get(i).getLev() != 0) { %>
-                            <a href="/qna_career/deleteQnapro.jsp?qno=<%=qnaList.get(i).getQno()%>&lev=1" class="inbtn delete_btn"> 삭제 </a>
+                            <a href="./deleteQnapro.jsp?qno=<%=qnaList.get(i).getQno()%>&lev=1" class="inbtn delete_btn"> 삭제 </a>
                             <% } %>
                         </td>
 

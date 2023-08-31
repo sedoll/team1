@@ -72,9 +72,9 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board_stu/boardStuList.jsp">학생게시판</a>
-                &gt; <a href="/board_stu/getBoardStu.jsp?bno=<%=bno%>">게시글</a>
-                &gt; <a href="/board_stu/addStuAns.jsp?bno=<%=bno%>">댓글 작성</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="./boardStuList.jsp">학생게시판</a>
+                &gt; <a href="./getBoardStu.jsp?bno=<%=bno%>">게시글</a>
+                &gt; <a href="./addStuAns.jsp?bno=<%=bno%>">댓글 작성</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">

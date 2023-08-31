@@ -47,7 +47,7 @@
             System.out.println("게시글 update 완료");
 //            response.sendRedirect("qnaList.jsp");
             out.println("<script>alert('게시글 추가 성공')</script>");
-            out.println("<script>location.href='boardList.jsp'</script>");
+            out.println("<script>location.href='./boardList.jsp'</script>");
         } else {
             System.out.println("게시글 update 실패");
             out.println("<script>alert('게시글 추가 실패')</script>");

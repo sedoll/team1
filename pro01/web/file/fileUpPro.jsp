@@ -24,7 +24,7 @@
     // file = multi.getFilesystemName(name);
     // oriFile = multi.getOriginalFileName(name);
 
-    response.sendRedirect("boardList.jsp");
+    response.sendRedirect("/pro01/file/boardList.jsp");
 %>
 <%--
 <html>

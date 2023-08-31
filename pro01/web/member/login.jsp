@@ -27,7 +27,7 @@
         .contents {
             clear: both;
             min-height: 120vh;
-            background-image: url("/img/login.jpg");
+            background-image: url("../img/login.jpg");
             background-repeat: no-repeat;
             background-position: center -250px;
         }
@@ -159,9 +159,9 @@
 
                 <div class="login-form">
                     <div class="logo-wrap">
-                        <img src="/img/teentalk_logo_300.png">
+                        <img src="../img/teentalk_logo_300.png">
                     </div>
-                    <form action="loginpro.jsp" id="login_frm" class="frm">
+                    <form action="./loginpro.jsp" id="login_frm" class="frm">
                         <table class="tb1">
                             <tbody>
                             <tr>

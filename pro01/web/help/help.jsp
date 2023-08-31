@@ -300,7 +300,7 @@
                     %>
                     <tr>
                         <td class="item1"><%=tot-- %></td>
-                        <td class="item2"><a href="/help/getBoard.jsp?bno=<%=arr.getBno() %>"><%=arr.getTitle() %></a></td>
+                        <td class="item2"><a href="./getBoard.jsp?bno=<%=arr.getBno() %>"><%=arr.getTitle() %></a></td>
                         <td class="item3"><%=date %></td>
                         <td class="item3"><%=arr.getCnt() %></td>
                     </tr>
@@ -343,7 +343,7 @@
                 </script>
               <div class="btn_group">
                   <% if (sid != null && sid.equals("admin")) { %>
-                  <a href="addBoard.jsp" class="inbtn"> 글 작성 </a>
+                  <a href="./addBoard.jsp" class="inbtn"> 글 작성 </a>
                   <% } %>
               </div>
         </div>

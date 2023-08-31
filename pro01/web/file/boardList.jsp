@@ -173,7 +173,7 @@
 
     } else {
         out.println("<script>alert('해당 페이지는 회원만 접근 가능합니다.')</script>");
-        out.println("<script>location.href='/index.jsp'</script>");
+        out.println("<script>location.href='/pro01/index.jsp'</script>");
     }
 
     request.setCharacterEncoding("utf8");
@@ -190,7 +190,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board/baordList.jsp">자료실</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="./baordList.jsp">자료실</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
@@ -212,7 +212,7 @@
                     <tr>
                         <td class="item1"><%=tot-- %></td>
                         <td class="item2">
-                            <a href="<%=request.getContextPath() %>downloadAction.jsp?file=<%=java.net.URLEncoder.encode(file, "UTF-8") %>
+                            <a href="downloadAction.jsp?file=<%=java.net.URLEncoder.encode(file, "UTF-8") %>
                             "><%=file %>
                             </a>
                         </td>

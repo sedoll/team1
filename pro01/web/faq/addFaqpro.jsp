@@ -23,10 +23,10 @@
         int cnt = pstmt.executeUpdate();
         if(cnt > 0) {
             System.out.println("FNQ 생성 완료");
-            response.sendRedirect("faqList.jsp");
+            response.sendRedirect("/pro01/faq/faqList.jsp");
         } else {
             System.out.println("FNQ 생성 실패");
-            response.sendRedirect("faqList.jsp");
+            response.sendRedirect("/pro01/faq/faqList.jsp");
         }
     } catch (SQLException e) {
         System.out.println("FNQ 생성: sql 에러");

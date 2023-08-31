@@ -302,7 +302,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board_tea/boardTeaList.jsp">선생님 게시판</a> &gt; <a href="/board_tea/getBoardTea.jsp?bno=<%=bno%>">게시글</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="./boardTeaList.jsp">선생님 게시판</a> &gt; <a href="./getBoardTea.jsp?bno=<%=bno%>">게시글</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
@@ -318,12 +318,12 @@
                     <tr>
                         <td>
                             <% if (sid != null && sid.equals(id2)) { %>
-                            <a href="/board_tea/updateBoardTea.jsp?bno=<%=bno%>&lev=0" class="inbtn">수정</a>
+                            <a href="./updateBoardTea.jsp?bno=<%=bno%>&lev=0" class="inbtn">수정</a>
                             <% } %>
                         </td>
                         <td>
                             <% if (sid != null &&( sid.equals("admin") || sid.equals(id2))) { %>
-                            <a href="/board_tea/deleteBoardTeapro.jsp?bno=<%=bno%>&lev=0" class="inbtn delete_btn" >삭제</a>
+                            <a href="./deleteBoardTeapro.jsp?bno=<%=bno%>&lev=0" class="inbtn delete_btn" >삭제</a>
                             <% } %>
                         </td>
                         <td><%=boardList.get(0).getAuthor()%></td>
@@ -368,10 +368,10 @@
                         <td class="item3"><%=date %></td>
                         <td class="item4">
                             <% if (sid != null && sid.equals(author)) { %>
-                            <a href="/board_tea/updateAnsTea.jsp?bno=<%=boardList.get(i).getBno()%>&lev=1" class="inbtn">수정</a>
+                            <a href="./updateAnsTea.jsp?bno=<%=boardList.get(i).getBno()%>&lev=1" class="inbtn">수정</a>
                             <% } %>
                             <% if(sid!=null && (sid.equals(boardList.get(i).getAuthor()) || sid.equals("admin")) && boardList.get(i).getLev() != 0) { %>
-                            <a href="/board_tea/deleteBoardTeapro.jsp?bno=<%=boardList.get(i).getBno()%>&lev=1" class="inbtn delete_btn"> 삭제 </a>
+                            <a href="./deleteBoardTeapro.jsp?bno=<%=boardList.get(i).getBno()%>&lev=1" class="inbtn delete_btn"> 삭제 </a>
                             <% } %>
                         </td>
 

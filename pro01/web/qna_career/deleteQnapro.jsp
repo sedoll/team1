@@ -25,10 +25,10 @@
         int cnt = pstmt.executeUpdate();
         if(cnt > 0) {
             System.out.println("글 삭제 완료");
-            response.sendRedirect("qnaList.jsp");
+            response.sendRedirect("/pro01/qna_career/qnaList.jsp");
         } else {
             System.out.println("글 삭제 실패");
-            response.sendRedirect("getQna.jsp?qno="+qno);
+            response.sendRedirect("/pro01/qna_career/getQna.jsp?qno="+qno);
         }
     } catch (SQLException e) {
         System.out.println("글 삭제: sql 에러");

@@ -47,11 +47,11 @@
             System.out.println("update 완료");
 //            response.sendRedirect("qnaList.jsp");
             out.println("<script>alert('질문 추가 성공')</script>");
-            out.println("<script>location.href='qnaList.jsp'</script>");
+            out.println("<script>location.href='/pro01/qna_career/qnaList.jsp'</script>");
         } else {
             System.out.println("추가 실패");
             out.println("<script>alert('질문 추가 실패')</script>");
-            out.println("<script>location.href='qnaList.jsp'</script>");
+            out.println("<script>location.href='/pro01/qna_career/qnaList.jsp'</script>");
         }
     } catch (SQLException e) {
         throw new RuntimeException(e);

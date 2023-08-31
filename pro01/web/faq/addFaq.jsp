@@ -69,7 +69,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/faq/faqList.jsp">FNQ</a> &gt; <a href="/faq/addFnq.jsp">FNQ 작성</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="./faqList.jsp">FNQ</a> &gt; <a href="./addFnq.jsp">FNQ 작성</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">

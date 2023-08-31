@@ -96,13 +96,13 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/help/help.jsp">공지사항</a>
-                &gt; <a href="/help/addBoard.jsp">공지글 작성</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="./help.jsp">공지사항</a>
+                &gt; <a href="./addBoard.jsp">공지글 작성</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
                 <h2 class="page_tit">공지글 작성</h2>
-                <form action="addBoardpro.jsp" id="login_frm" class="frm">
+                <form action="./addBoardpro.jsp" id="login_frm" class="frm">
                     <table class="tb1">
                         <tbody>
                         <tr>

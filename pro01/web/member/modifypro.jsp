@@ -39,7 +39,7 @@
         pstmt.setString(4, id);
         cnt = pstmt.executeUpdate();
         if(cnt > 0){
-            response.sendRedirect("/");
+            response.sendRedirect("/pro01");
         } else {
             response.sendRedirect("/member/login.jsp");
         }

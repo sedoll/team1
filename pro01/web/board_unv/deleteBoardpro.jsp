@@ -22,10 +22,10 @@
         if(cnt > 0) {
             System.out.println("글 삭제 완료");
             out.println("<script>alert('삭제 성공')</script>");
-            out.println("<script>location.href='boardList.jsp'</script>");
+            out.println("<script>location.href='/pro01/board_unv/boardList.jsp'</script>");
         } else {
             System.out.println("글 삭제 실패");
-            response.sendRedirect("getBoardTea.jsp?bno="+bno);
+            response.sendRedirect("/pro01/board_unv/getBoardTea.jsp?bno="+bno);
         }
     } catch (SQLException e) {
         System.out.println("글 삭제: sql 에러");

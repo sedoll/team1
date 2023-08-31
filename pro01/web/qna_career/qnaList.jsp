@@ -170,7 +170,7 @@
 
     } else {
         out.println("<script>alert('해당 페이지는 회원만 접근 가능합니다.')</script>");
-        out.println("<script>location.href='/index.jsp'</script>");
+        out.println("<script>location.href='/pro01/index.jsp'</script>");
     }
 
     List<Qna> qnaList = new ArrayList<>();
@@ -213,7 +213,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/qna_career/qnaList.jsp">진로상담</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="./qnaList.jsp">진로상담</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
@@ -237,7 +237,7 @@
                     %>
                     <tr>
                         <td class="item1"><%=tot-- %></td>
-                        <td class="item2"><a href="/qna_career/getQna.jsp?qno=<%=arr.getPar() %>"><%=arr.getTitle() %></a></td>
+                        <td class="item2"><a href="./getQna.jsp?qno=<%=arr.getPar() %>"><%=arr.getTitle() %></a></td>
                         <td class="item3"><%=arr.getName().substring(0, 1) %>
                             <%
                                 for(int i=0; i<arr.getName().length()-1; i++) {

@@ -301,7 +301,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board/boardList.jsp">자유게시판</a> &gt; <a href="/board/getBoard.jsp?bno=<%=bno%>">게시글</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="./boardList.jsp">자유게시판</a> &gt; <a href="./getBoard.jsp?bno=<%=bno%>">게시글</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
@@ -317,12 +317,12 @@
                         <tr>
                             <td>
                                 <% if (sid != null && sid.equals(id2)) { %>
-                                <a href="/board/updateBoard.jsp?bno=<%=bno%>&lev=0" class="inbtn">수정</a>
+                                <a href="./updateBoard.jsp?bno=<%=bno%>&lev=0" class="inbtn">수정</a>
                                 <% } %>
                             </td>
                             <td>
                                 <% if (sid != null &&( sid.equals("admin") || sid.equals(id2))) { %>
-                                <a href="/board/deleteBoardpro.jsp?bno=<%=bno%>&lev=0" class="inbtn delete_btn" >삭제</a>
+                                <a href="./deleteBoardpro.jsp?bno=<%=bno%>&lev=0" class="inbtn delete_btn" >삭제</a>
                                 <% } %>
                             </td>
                             <td><%=boardList.get(0).getAuthor()%></td>
@@ -369,10 +369,10 @@
                         <td class="item4">
 <%--                        0813 댓글 수정버튼 표시안되어 코드 수정. by 백준철--%>
                         <% if (sid != null && sid.equals(author) ) { %>
-                        <a href="/board/updateAns.jsp?bno=<%=boardList.get(i).getBno()%>&lev=1" class="inbtn">수정</a>
+                        <a href="./updateAns.jsp?bno=<%=boardList.get(i).getBno()%>&lev=1" class="inbtn">수정</a>
                         <% } %>
                         <% if(sid!=null && (sid.equals(boardList.get(i).getAuthor()) || sid.equals("admin")) && boardList.get(i).getLev() != 0) { %>
-                        <a href="/board/deleteBoardpro.jsp?bno=<%=boardList.get(i).getBno()%>&lev=1" class="inbtn delete_btn"> 삭제 </a>
+                        <a href="./deleteBoardpro.jsp?bno=<%=boardList.get(i).getBno()%>&lev=1" class="inbtn delete_btn"> 삭제 </a>
                         <% } %>
                     </td>
                     </tr>

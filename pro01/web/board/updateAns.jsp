@@ -116,14 +116,14 @@
     <div class="contents" id="contents">
         <div class="breadcrumb">
             <p>
-                <a href="/">HOME</a> &gt; <a href="/board/boardList.jsp">자유게시판</a> &gt; <a href="/board/boardList.jsp?bno=<%=bno%>">board 상세</a>
-                &gt; <a href="/board/updateAns.jsp?bno=<%=bno%>">댓글 수정</a>
+                <a href="/">HOME</a> &gt; <a href="./boardList.jsp">자유게시판</a> &gt; <a href="./boardList.jsp?bno=<%=bno%>">board 상세</a>
+                &gt; <a href="./updateAns.jsp?bno=<%=bno%>">댓글 수정</a>
             </p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
                 <h2 class="page_tit">댓글 수정</h2>
-                    <form action="updateBoardpro.jsp" id="login_frm" class="frm">
+                    <form action="./updateBoardpro.jsp" id="login_frm" class="frm">
                         <table class="tb1">
                             <tbody>
                                 <tr>

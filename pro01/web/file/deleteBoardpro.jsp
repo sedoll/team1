@@ -12,7 +12,7 @@
     if (file.exists()) {
         file.delete();
         out.println("<script>alert('삭제 성공')</script>");
-        out.println("<script>location.href='boardList.jsp'</script>");
+        out.println("<script>location.href='/pro01/file/boardList.jsp'</script>");
     } else {
         System.out.println("삭제 실패");
     }

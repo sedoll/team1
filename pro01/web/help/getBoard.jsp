@@ -300,7 +300,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/help/help.jsp">공지사항</a> &gt; <a href="/help/getBoard.jsp?bno=<%=bno%>">공지 상세</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="./help.jsp">공지사항</a> &gt; <a href="./getBoard.jsp?bno=<%=bno%>">공지 상세</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
@@ -313,12 +313,12 @@
                         <tr>
                             <td>
                                 <% if (sid != null && sid.equals("admin")) { %>
-                                <a href="/help/updateBoard.jsp?bno=<%=bno%>" class="inbtn">수정</a>
+                                <a href="./updateBoard.jsp?bno=<%=bno%>" class="inbtn">수정</a>
                                 <% } %>
                             </td>
                             <td>
                                 <% if (sid != null && sid.equals("admin")) { %>
-                                <a href="/help/deleteBoardpro.jsp?bno=<%=bno%>" class="inbtn delete_btn" >삭제</a>
+                                <a href="./deleteBoardpro.jsp?bno=<%=bno%>" class="inbtn delete_btn" >삭제</a>
                                 <% } %>
                             </td>
                             <td><%=boardList.get(0).getAuthor()%></td>

@@ -206,7 +206,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/admin/baordList.jsp">관리자 페이지</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="./baordList.jsp">관리자 페이지</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
@@ -236,7 +236,7 @@
                         <td class="item2"><%=arr.getName()%></td>
                         <td class="item2"><%=date %></td>
                         <td class="item1"><%= (arr.getJob() == 1 ? "학생" : "선생님") %></td>
-                        <td class="item1"><a href="/admin/deleteBoardpro.jsp?id=<%=arr.getId()%>" class="inbtn delete_btn" >탈퇴</a></td>
+                        <td class="item1"><a href="./deleteBoardpro.jsp?id=<%=arr.getId()%>" class="inbtn delete_btn" >탈퇴</a></td>
                     </tr>
                     <%
                         }

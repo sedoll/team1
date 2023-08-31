@@ -305,12 +305,12 @@
 
                 <div class="join_form">
                     <div class="header">
-                        <img src="/img/로고48.png" />
+                        <img src="../img/로고48.png" />
                         <h2>회원가입</h2>
 
                     </div>
 
-                    <form class="frm1" action="joinpro.jsp" method="post" onsubmit="return inform(this)">
+                    <form class="frm1" action="./joinpro.jsp" method="post" onsubmit="return inform(this)">
 
                         <div class="register_info_id">
                             <label>아이디<%--<span>사용할 수 없는 아이디 입니다</span>--%></label>

@@ -212,7 +212,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board/baordList.jsp">자유게시판</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="./baordList.jsp">자유게시판</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
@@ -237,7 +237,7 @@
                     %>
                     <tr>
                         <td class="item1"><%=tot-- %></td>
-                        <td class="item2"><a href="/board_unv/getBoard.jsp?bno=<%=arr.getBno() %>"><%=arr.getTitle() %></a></td>
+                        <td class="item2"><a href="./getBoard.jsp?bno=<%=arr.getBno() %>"><%=arr.getTitle() %></a></td>
                         <td class="item3"><%=arr.getAuthor()%></td>
                         <td class="item3"><%=date %></td>
                         <td class="item1"><%=arr.getCnt() %></td>

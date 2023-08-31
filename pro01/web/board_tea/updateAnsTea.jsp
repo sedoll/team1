@@ -111,8 +111,8 @@
     <div class="contents" id="contents">
         <div class="breadcrumb">
             <p>
-                <a href="/">HOME</a> &gt; <a href="/board_tea/boardTeaList.jsp">선생님 게시판</a> &gt; <a href="/board_tea/getBoardTea.jsp?bno=<%=bno%>">게시글</a>
-                &gt; <a href="/board_tea/updateAnsTea.jsp?bno=<%=bno%>">댓글 수정</a>
+                <a href="/">HOME</a> &gt; <a href="./boardTeaList.jsp">선생님 게시판</a> &gt; <a href="./getBoardTea.jsp?bno=<%=bno%>">게시글</a>
+                &gt; <a href="./updateAnsTea.jsp?bno=<%=bno%>">댓글 수정</a>
             </p>
         </div>
         <section class="page" id="page1">

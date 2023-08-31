@@ -27,7 +27,7 @@
             System.out.println("공지 생성 완료");
 //            response.sendRedirect("qnaList.jsp");
             out.println("<script>alert('게시글 추가 성공')</script>");
-            out.println("<script>location.href='help.jsp'</script>");
+            out.println("<script>location.href='/pro01/help/help.jsp'</script>");
         } else {
             System.out.println("공지 생성 실패");
             out.println("<script>alert('게시글 추가 실패')</script>");

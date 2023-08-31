@@ -133,8 +133,8 @@
     <div class="contents" id="contents">
         <div class="breadcrumb">
             <p>
-                <a href="/">HOME</a> &gt; <a href="/board_stu/boardStuList.jsp">학생 게시판</a> &gt; <a href="/board_stu/getBoardStu.jsp?bno=<%=bno%>">글 상세</a>
-                &gt; <a href="/board_stu/updateBoardStu.jsp?bno=<%=bno%>">게시글 수정</a>
+                <a href="/">HOME</a> &gt; <a href="./boardStuList.jsp">학생 게시판</a> &gt; <a href="./getBoardStu.jsp?bno=<%=bno%>">글 상세</a>
+                &gt; <a href="./updateBoardStu.jsp?bno=<%=bno%>">게시글 수정</a>
             </p>
         </div>
         <section class="page" id="page1">

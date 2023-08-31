@@ -23,7 +23,7 @@
             out.println("<script>location.href='help.jsp'</script>");
         } else {
             System.out.println("글 삭제 실패");
-            response.sendRedirect("getBoard.jsp?bno="+bno);
+            response.sendRedirect("/pro01/help/getBoard.jsp?bno="+bno);
         }
     } catch (SQLException e) {
         System.out.println("글 삭제: sql 에러");

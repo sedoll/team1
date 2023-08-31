@@ -96,8 +96,8 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board_stu/boardStuList.jsp">학생게시판</a>
-                &gt; <a href="/board_stu/addStuBoard.jsp">게시글 작성</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="./boardStuList.jsp">학생게시판</a>
+                &gt; <a href="./addBoardStu.jsp">게시글 작성</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">

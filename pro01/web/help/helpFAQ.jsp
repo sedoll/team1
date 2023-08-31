@@ -302,7 +302,7 @@
   </header>
   <div class="contents" id="contents">
     <div class="breadcrumb">
-      <p><a href="/">HOME</a> &gt; <a href="/board/baordList.jsp">고객센터</a></p>
+      <p><a href="/">HOME</a> &gt; <a href="./help.jsp">고객센터</a></p>
     </div>
     <section class="page" id="page1">
       <div class="page_wrap">
@@ -312,7 +312,7 @@
             <div class="helpmenu">
                 <ul>
                   <li><a href="help.jsp">공지사항</a></li>
-                  <li id="selectedmenu"><a href="helpFAQ.jsp">FAQ</a></li>
+                  <li id="selectedmenu"><a href="./helpFAQ.jsp">FAQ</a></li>
                   <%-- <li><a href="helpQuestion.jsp">문의하기</a></li> --%>
                 </ul>
             </div>

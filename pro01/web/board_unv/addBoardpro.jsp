@@ -27,7 +27,7 @@
         int cnt = pstmt.executeUpdate();
         if(cnt > 0) {
             System.out.println("입시 정보글 생성 완료");
-            out.println("<script>location.href='boardList.jsp'</script>");
+            out.println("<script>location.href='/pro01/board_unv/boardList.jsp'</script>");
         } else {
             System.out.println("입시 정보글 생성 실패");
         }

@@ -30,12 +30,12 @@
         if(cnt > 0) {
             System.out.println("댓글 생성 완료");
             out.println("<script>alert('댓글 추가 성공')</script>");
-            out.println("<script>location.href='getBoardStu.jsp?bno="+ bno +"'</script>");
+            out.println("<script>location.href='/pro01/board_stu/getBoardStu.jsp?bno="+ bno +"'</script>");
         } else {
             System.out.println("댓글 생성 실패");
 //            response.sendRedirect("addTeaAns.jsp");
             out.println("<script>alert('댓글 추가 실패')</script>");
-            out.println("<script>location.href='addStuAns.jsp?bno="+ bno +"'</script>");
+            out.println("<script>location.href='/pro01/board_stu/addStuAns.jsp?bno="+ bno +"'</script>");
         }
     } catch (SQLException e) {
         System.out.println("댓글 생성: sql 에러");

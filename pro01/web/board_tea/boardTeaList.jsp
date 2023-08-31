@@ -171,7 +171,7 @@
 
     } else {
         out.println("<script>alert('해당 페이지는 선생님만 접근 가능합니다.')</script>");
-        out.println("<script>location.href='/index.jsp'</script>");
+        out.println("<script>location.href='/pro01'</script>");
     }
 %>
 <%
@@ -218,7 +218,7 @@
     </header>
     <div class="contents" id="contents">
         <div class="breadcrumb">
-            <p><a href="/">HOME</a> &gt; <a href="/board_tea/baordTeaList.jsp">선생님 게시판</a></p>
+            <p><a href="/">HOME</a> &gt; <a href="./baordTeaList.jsp">선생님 게시판</a></p>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
@@ -243,7 +243,7 @@
                     %>
                     <tr>
                         <td class="item1"><%=tot-- %></td>
-                        <td class="item2"><a href="/board_tea/getBoardTea.jsp?bno=<%=arr.getPar() %>"><%=arr.getTitle() %></a></td>
+                        <td class="item2"><a href="./getBoardTea.jsp?bno=<%=arr.getPar() %>"><%=arr.getTitle() %></a></td>
                         <td class="item3"><%=arr.getAuthor()%></td>
                         <td class="item3"><%=date %></td>
                         <td class="item1"><%=arr.getCnt() %></td>

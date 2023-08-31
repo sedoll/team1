@@ -28,13 +28,13 @@
         if(cnt > 0) {
             System.out.println("게시글 수정 완료");
             out.println("<script>alert('게시글 수정 성공')</script>");
-            out.println("<script>location.href='boardList.jsp'</script>");
+            out.println("<script>location.href='/pro01/board_unv/boardList.jsp'</script>");
 //            response.sendRedirect("boardTeaList.jsp");
         } else {
             System.out.println("게시글 수정 실패");
 //            response.sendRedirect("updateQuestion.jsp?bno="+bno);
             out.println("<script>alert('게시글 수정 실패')</script>");
-            out.println("<script>location.href='boardList.jsp'</script>"); //location
+            out.println("<script>location.href='/pro01/board_unv/boardList.jsp'</script>"); //location
         }
     } catch (SQLException e) {
         System.out.println("질문 수정: sql 에러");
