@@ -138,3 +138,6 @@ FROM qna_career q, member m WHERE q.author=m.id order BY q.par DESC, q.lev ASC, 
 -- DROP TABLE board;
 -- DROP TABLE board_stu;
 -- DROP TABLE board_tea;
+
+-- 더미데이터
+UPDATE product SET pname = '의견이 다를까' WHERE NO = 15;

@@ -10,12 +10,20 @@ INSERT INTO member(id, pw, NAME, email, tel, job)
 	VALUES('hong', 'h5678', '홍길동', 'hong@edu.com', '010-1111-2222', 1);
 INSERT INTO member(id, pw, NAME, email, tel, job) 
 	VALUES('kang', 'kang12', '강감찬', 'kang@edu.com', '010-3333-4444', 1);
+INSERT INTO member(id, pw, NAME, email, tel, job) 
+	VALUES('kim', '1234', '김철수', 'son@edu.com', '010-3333-2222', 1);
+INSERT INTO member(id, pw, NAME, email, tel, job) 
+	VALUES('sej123', '1234', '강감찬', 'sej@edu.com', '010-2323-4444', 1);
 
 -- 선생
 INSERT INTO member(id, pw, NAME, email, tel, job) 
 	VALUES('son', 'sony1234', '손흥민', 'son@edu.com', '010-5555-6666', 2);
 INSERT INTO member(id, pw, NAME, email, tel, job) 
 	VALUES('lee', 'lee4885', '이순신', 'lee@edu.com', '010-8765-4321', 2);
+INSERT INTO member(id, pw, NAME, email, tel, job) 
+	VALUES('kong', '1234', '오킹콩', 'kong@edu.com', '010-3828-6666', 2);
+INSERT INTO member(id, pw, NAME, email, tel, job) 
+	VALUES('usin', '1234', '김유신', 'usin@edu.com', '010-8765-1234', 2);
 	
 -- board
 -- 본문 더미 자유게시판
